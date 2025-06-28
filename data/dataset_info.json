@@ -1,4 +1,18 @@
 {
+  "vinder_adkg_test": {
+    "file_name": "./0_my_dataset/vindr/qwen2_vindr_input_test_len_2108.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "coco_test": {
     "file_name": "./0_my_dataset/coco/coco_test_format.mcml.json",
     "formatting": "sharegpt",

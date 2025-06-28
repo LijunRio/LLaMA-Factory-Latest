@@ -202,6 +202,7 @@ def process_prediction_file(file_path, original_path, visualize_every=20):
 
         # 获取图像路径并读取图像尺寸
         image_path = original_data[i]['images'][0]
+        image_path = image_path.replace('/home/june/datasets/', '/u/home/lj0/datasets/2gpu-workstations/')  # 去掉 file:// 前缀
         image = np.array(Image.open(image_path).convert("RGB"))
         height, width = image.shape[:2]
         resolution = (width, height)
