@@ -33,6 +33,42 @@ except Exception as e:
     import traceback
     traceback.print_exc()
 
+# Let's manually test the processor loading logic from load_tokenizer
+print("\n=== Manual processor loading test ===")
+from llamafactory.model.loader import _get_init_kwargs
+
+init_kwargs = _get_init_kwargs(model_args)
+print(f"init_kwargs: {init_kwargs}")
+
+try:
+    processor = AutoProcessor.from_pretrained(
+        model_args.model_name_or_path,
+        use_fast=model_args.use_fast_tokenizer,
+        **init_kwargs,
+    )
+    print(f"Processor loaded with use_fast=True: {type(processor)}")
+except ValueError as ve:
+    print(f"ValueError with use_fast=True: {ve}")
+    try:
+        processor = AutoProcessor.from_pretrained(
+            model_args.model_name_or_path,
+            use_fast=not model_args.use_fast_tokenizer,
+            **init_kwargs,
+        )
+        print(f"Processor loaded with use_fast=False: {type(processor)}")
+    except Exception as e2:
+        print(f"Failed with use_fast=False: {e2}")
+        processor = None
+except Exception as e:
+    print(f"Failed to load processor: {e}")
+    processor = None
+
+if processor is not None and "Processor" not in processor.__class__.__name__:
+    print(f"Dropping processor because it's not a Processor: {type(processor)}")
+    processor = None
+
+print(f"Final processor result: {processor is not None}")
+
 print("\n=== Testing load_tokenizer function ===")
 try:
     tokenizer_module = load_tokenizer(model_args)
