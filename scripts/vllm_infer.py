@@ -92,6 +92,22 @@ def vllm_infer(
     training_args = Seq2SeqTrainingArguments(output_dir="dummy_dir")
     tokenizer_module = load_tokenizer(model_args)
     tokenizer = tokenizer_module["tokenizer"]
+    
+    # Fix processor loading issue for multimodal models
+    if tokenizer_module["processor"] is None:
+        print("Processor is None, attempting to load manually...")
+        try:
+            from transformers import AutoProcessor
+            processor = AutoProcessor.from_pretrained(
+                model_args.model_name_or_path,
+                trust_remote_code=True
+            )
+            tokenizer_module["processor"] = processor
+            print(f"Successfully loaded processor: {type(processor)}")
+        except Exception as e:
+            print(f"Failed to manually load processor: {e}")
+            raise RuntimeError("Cannot proceed without processor for multimodal model")
+    
     template_obj = get_template_and_fix_tokenizer(tokenizer, data_args)
     template_obj.mm_plugin.expand_mm_tokens = False  # for vllm generate
 
