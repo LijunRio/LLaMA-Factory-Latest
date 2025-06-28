@@ -58,7 +58,6 @@ def vllm_infer(
     video_fps: float = 2.0,
     video_maxlen: int = 128,
     batch_size: int = 1024,
-    trust_remote_code: bool = False,
 ):
     r"""Perform batch generation using vLLM engine, which supports tensor parallelism.
 
@@ -76,7 +75,7 @@ def vllm_infer(
             template=template,
             cutoff_len=cutoff_len,
             max_samples=max_samples,
-            preprocessing_num_workers=1,  # Disable multiprocessing to avoid processor issues
+            preprocessing_num_workers=16,
             default_system=default_system,
             enable_thinking=enable_thinking,
             vllm_config=vllm_config,
@@ -85,30 +84,12 @@ def vllm_infer(
             top_k=top_k,
             max_new_tokens=max_new_tokens,
             repetition_penalty=repetition_penalty,
-            trust_remote_code=trust_remote_code,
         )
     )
 
     training_args = Seq2SeqTrainingArguments(output_dir="dummy_dir")
     tokenizer_module = load_tokenizer(model_args)
     tokenizer = tokenizer_module["tokenizer"]
-    
-    # Fix processor loading issue for multimodal models
-    if tokenizer_module["processor"] is None:
-        print("Processor is None, attempting to load directly...")
-        try:
-            from transformers import AutoProcessor
-            processor = AutoProcessor.from_pretrained(
-                model_args.model_name_or_path,
-                trust_remote_code=True
-            )
-            tokenizer_module["processor"] = processor
-            print(f"Successfully loaded processor: {type(processor)}")
-        except Exception as e:
-            print(f"Failed to load processor: {e}")
-            # As a last resort, try without processor for text-only inference
-            tokenizer_module["processor"] = None
-    
     template_obj = get_template_and_fix_tokenizer(tokenizer, data_args)
     template_obj.mm_plugin.expand_mm_tokens = False  # for vllm generate
 
