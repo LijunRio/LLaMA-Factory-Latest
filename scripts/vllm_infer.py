@@ -58,6 +58,7 @@ def vllm_infer(
     video_fps: float = 2.0,
     video_maxlen: int = 128,
     batch_size: int = 1024,
+    trust_remote_code: bool = False,
 ):
     r"""Perform batch generation using vLLM engine, which supports tensor parallelism.
 
@@ -84,6 +85,7 @@ def vllm_infer(
             top_k=top_k,
             max_new_tokens=max_new_tokens,
             repetition_penalty=repetition_penalty,
+            trust_remote_code=trust_remote_code,
         )
     )
 
