@@ -108,7 +108,6 @@ def vllm_infer(
             print(f"Failed to load processor: {e}")
             # As a last resort, try without processor for text-only inference
             tokenizer_module["processor"] = None
-    # Fix processor loading issue for multimodal models
     
     template_obj = get_template_and_fix_tokenizer(tokenizer, data_args)
     template_obj.mm_plugin.expand_mm_tokens = False  # for vllm generate
