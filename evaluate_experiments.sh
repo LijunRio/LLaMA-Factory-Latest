@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Common parameters configuration
-DATASET_NAME="vinder_adkg_test"  # Dataset name variable
+DATASET_NAME="padchest_gr_test"  # Dataset name variable
 
 COMMON_ARGS=(
     --stage sft
