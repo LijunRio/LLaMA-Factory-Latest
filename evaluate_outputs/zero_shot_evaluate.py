@@ -13,11 +13,8 @@ import supervision as sv
 import wandb
 import re
 
-# CLASSES = ['Pleural thickening', 'Aortic enlargement', 'Pulmonary fibrosis', 'Cardiomegaly', 'Nodule or Mass', 'Lung Opacity', 'Other lesion', 'Pleural effusion', 'Interstitial lung disease(ILD)', 'Infiltration', 'Calcification', 'Consolidation', 'Atelectasis', 'Rib fracture', 'Mediastinal shift', 'Enlarged PA', 'Pneumothorax', 'Emphysema', 'Lung cavity', 'Lung cyst', 'Clavicle fracture', 'Edema', 'None', 'Not in the list']
+CLASSES = ['Pleural thickening', 'Aortic enlargement', 'Pulmonary fibrosis', 'Cardiomegaly', 'Nodule/Mass', 'Lung Opacity', 'Other lesion', 'Pleural effusion', 'ILD', 'Infiltration', 'Calcification', 'Consolidation', 'Atelectasis', 'Rib fracture', 'Mediastinal shift', 'Enlarged PA', 'Pneumothorax', 'Emphysema', 'Lung cavity', 'Lung cyst', 'Clavicle fracture', 'Edema', 'None', 'Not in the list']
 # # CLASSES_LOWER = [cls.lower() for cls in CLASSES]
-
-
-CLASSES =['person', 'chair', 'car', 'dining table', 'bottle', 'cup', 'bowl', 'handbag', 'truck', 'backpack', 'cell phone', 'bench', 'sports ball', 'knife', 'couch', 'sink', 'book', 'tie', 'potted plant', 'vase', 'umbrella', 'traffic light', 'bed', 'clock', 'bus', 'tv', 'dog', 'motorcycle', 'bird', 'horse', 'spoon', 'laptop', 'bicycle', 'cake', 'surfboard', 'tennis racket', 'baseball bat', 'remote', 'boat', 'skateboard', 'pizza', 'cow', 'baseball glove', 'giraffe', 'oven', 'keyboard', 'skis', 'banana', 'carrot', 'kite', 'wine glass', 'elephant', 'stop sign', 'refrigerator', 'broccoli', 'microwave', 'teddy bear', 'sheep', 'donut', 'zebra', 'orange', 'apple', 'fire hydrant', 'toothbrush', 'scissors', 'None', 'Not in the list']
 
 
 
@@ -28,57 +25,73 @@ def read_jsonl(output_file):
             data.append(json.loads(line)) 
     return data
 
-# def extract_all_findings_and_bboxes(text):
-#     results = []
-#     # 每个对象提取为一个块：找到 { ... } 的结构
-#     matches = re.finditer(
-#         r'\{\s*"finding"\s*:\s*"([^"]+)"\s*,\s*"bounding_box"\s*:\s*\[([^\]]+)\]\s*\}', 
-#         text
-#     )
-
-#     for match in matches:
-#         finding = match.group(1)
-#         bbox_str = match.group(2)
-#         try:
-#             bbox = [int(x.strip()) for x in bbox_str.split(',')]
-#         except:
-#             bbox = None  # 如果有格式错误就跳过/标记
-#         results.append({
-#             "finding": finding,
-#             "bounding_box": bbox
-#         })
-
-#     return results if results else None
 
 import re
 
 def extract_all_findings_and_bboxes(text):
-    # 清理输入文本，去除 <answer> 标签
-    cleaned_text = re.sub(r'<[^>]+>', '', text)
-    
-    # 匹配 finding 和 bounding_box 使用正则表达式
-    pattern = r'"finding"\s*:\s*"([^"]+)"\s*,\s*"bounding_box"\s*:\s*\[\s*([^\]]+)\s*\]'
-    
-    # 提取所有匹配项
-    matches = re.findall(pattern, cleaned_text)
-    
     results = []
-    for match in matches:
-        finding = match[0]
-        # 将 bounding_box 的字符串分割成数字列表
-        try:
-            bounding_box = [int(x.strip()) for x in match[1].split(',')]
-        except ValueError:
-            bounding_box = None  # 如果遇到无效格式则跳过
-        results.append({
-            "finding": finding,
-            "bounding_box": bounding_box
-        })
     
-    return results if results else None
+    # 方法1: 尝试直接解析整个文本作为JSON数组
+    try:
+        # 清理文本，移除可能的标签和代码块标记
+        cleaned_text = re.sub(r'<[^>]*>', '', text)  # 移除HTML标签
+        cleaned_text = re.sub(r'```json\s*', '', cleaned_text)  # 移除json代码块开始
+        cleaned_text = re.sub(r'```\s*$', '', cleaned_text)  # 移除代码块结束
+        cleaned_text = cleaned_text.strip()
+        
+        # 尝试解析为JSON
+        json_data = json.loads(cleaned_text)
+        if isinstance(json_data, list):
+            for item in json_data:
+                if isinstance(item, dict) and 'label' in item and 'bbox_2d' in item:
+                    results.append({
+                        "label": item['label'],
+                        "bbox_2d": item['bbox_2d']
+                    })
+        return results if results else []
+    except (json.JSONDecodeError, ValueError):
+        pass  # 如果JSON解析失败，继续尝试其他方法
+    
+    # 方法2: 使用正则表达式匹配单个对象 {"bbox_2d": [...], "label": "..."}
+    object_pattern = r'\{\s*"bbox_2d"\s*:\s*\[\s*([^\]]+)\s*\]\s*,\s*"label"\s*:\s*"([^"]+)"\s*\}'
+    matches = re.findall(object_pattern, text)
+    for match in matches:
+        bbox_str, label = match
+        try:
+            bbox_2d = [int(x.strip()) for x in bbox_str.split(',')]
+            results.append({
+                "label": label,
+                "bbox_2d": bbox_2d
+            })
+        except ValueError:
+            continue
+    
+    if results:
+        return results
+    
+    # 方法3: 使用正则表达式匹配 "label": "...", "bbox_2d": [...]
+    pattern = r'"label"\s*:\s*"([^"]+)"\s*,\s*"bbox_2d"\s*:\s*\[\s*([^\]]+)\s*\]'
+    matches = re.findall(pattern, text)
+    for match in matches:
+        label, bbox_str = match
+        try:
+            bbox_2d = [int(x.strip()) for x in bbox_str.split(',')]
+            results.append({
+                "label": label,
+                "bbox_2d": bbox_2d
+            })
+        except ValueError:
+            continue
+    
+    return results if results else []
 
 
 def convert_bboxes2pixel(data, width, height):
+    # 检查输入数据是否为 None
+    if data is None:
+        print("Input data is None, returning empty list.")
+        return []
+        
     # 验证 width 和 height 是否有效
     if not isinstance(width, int) or not isinstance(height, int) or width <= 0 or height <= 0:
         print("Invalid width or height values")
@@ -87,14 +100,14 @@ def convert_bboxes2pixel(data, width, height):
     converted = []
     try:
         for item in data:
-            finding = item.get('finding', '')
+            finding = item.get('label', '')
             
-            # 检查 bounding_box 是否有效
-            if isinstance(item.get('bounding_box'), (list, tuple)) and len(item['bounding_box']) == 4:
-                xmin, ymin, xmax, ymax = item['bounding_box']
+            # 检查 bbox_2d 是否有效
+            if isinstance(item.get('bbox_2d'), (list, tuple)) and len(item['bbox_2d']) == 4:
+                xmin, ymin, xmax, ymax = item['bbox_2d']
             else:
                 print(f"Skipping item with invalid bounding box: {item}")
-                continue  # 如果 bounding_box 无效，则跳过该项
+                continue  # 如果 bbox_2d 无效，则跳过该项
             
             # 计算新的 bounding box
             new_bbox = [
@@ -105,7 +118,7 @@ def convert_bboxes2pixel(data, width, height):
             ]
             
             # 将处理结果添加到 converted 列表中
-            converted.append({'finding': finding, 'bounding_box': new_bbox})
+            converted.append({'label': finding, 'bbox_2d': new_bbox})
         
         return converted  # 把返回值放在循环外部
     except Exception as e:
@@ -119,8 +132,8 @@ def convert_to_svformat(data):
     pred_labels = []
     
     for item in data:
-        pred_boxes.append(item["bounding_box"])  
-        pred_labels.append(item["finding"])     
+        pred_boxes.append(item["bbox_2d"])  
+        pred_labels.append(item["label"])     
     formatted_output = {
         "<OD>": {
             "bboxes": pred_boxes,
@@ -148,21 +161,21 @@ def convert_for_rodeo(detections):
     
     try:
         for d in detections:
-            if 'finding' not in d or 'bounding_box' not in d:
+            if 'label' not in d or 'bbox_2d' not in d:
                 continue  # 跳过缺少必要字段的数据
             
-            if not isinstance(d['bounding_box'], (list, tuple)) or len(d['bounding_box']) != 4:
-                continue  # 跳过 bounding_box 长度不够的数据
+            if not isinstance(d['bbox_2d'], (list, tuple)) or len(d['bbox_2d']) != 4:
+                continue  # 跳过 bbox_2d 长度不够的数据
             
-            if d['finding'] not in CLASSES:
+            if d['label'] not in CLASSES:
                 continue  # 跳过不在 CLASSES 里的类别
             
-            matches = get_close_matches(d['finding'], CLASSES, n=1, cutoff=0.5)
+            matches = get_close_matches(d['label'], CLASSES, n=1, cutoff=0.5)
             if not len(matches)==0:
                 class_id = CLASSES.index(matches[0])  
             else:
                 class_id = CLASSES.index('Not in the list')
-            bbox = d['bounding_box']
+            bbox = d['bbox_2d']
             converted.append([bbox[0], bbox[1], bbox[2], bbox[3], class_id])
 
         if not converted:
@@ -207,11 +220,17 @@ def process_prediction_file(file_path, original_path, visualize_every=20):
         height, width = image.shape[:2]
         resolution = (width, height)
 
+        # 处理空列表的情况
+        if len(prediction) == 0 or len(ground_truth) == 0:
+            print(f"Skipped index {i}: No findings or bounding boxes.")
+            skipped_samples.append(i)
+            continue
+            
         pixel_prediction = convert_bboxes2pixel(prediction, width, height)
         pixel_ground_truth = convert_bboxes2pixel(ground_truth, width, height)
 
-        if prediction is None or ground_truth is None or len(pixel_prediction) == 0 or len(pixel_ground_truth) == 0:
-            print(f"Skipped index {i}: No findings or bounding boxes.")
+        if pixel_prediction is None or pixel_ground_truth is None or len(pixel_prediction) == 0 or len(pixel_ground_truth) == 0:
+            print(f"Skipped index {i}: No valid pixel predictions or ground truth.")
             skipped_samples.append(i)
             continue
 
@@ -291,11 +310,9 @@ def process_prediction_file(file_path, original_path, visualize_every=20):
 
 # 
 if __name__ == "__main__":
-    # os.environ["WANDB_MODE"] = "disabled"
-    # folder = '/u/home/lj0/Code/New_LLaMA-Factory/evaluate_outputs/zero_shot_coco/Qwen_Qwen2.5-VL-3B-Instruct'  # <-- 设置你的 zero-shot 输出路径
-    # folder = '/u/home/lj0/Code/New_LLaMA-Factory/evaluate_outputs/zero_shot_coco_2/'
-    folder = '/u/home/lj0/Code/LLaMA-Factory-Latest/evaluate_outputs/InternVL3-8B-hf/lora/eval_2025-06-28-13-50-22'
+    folder = '/u/home/lj0/Code/LLaMA-Factory-Latest/evaluate_outputs/Qwen2-VL-7B-Instruct/vindr_test_set'
     model_name = os.path.basename(folder)
+    # os.environ["WANDB_MODE"] = "disabled"
 
     wandb.init(
         project="Qwen Experiment",
@@ -304,13 +321,12 @@ if __name__ == "__main__":
     )
 
     file_path = os.path.join(folder, 'generated_predictions.jsonl')
-    # file_path = os.path.join(folder, 'generated_predictions_llamafactory_vlm.jsonl')
     if not os.path.exists(file_path):
         raise FileNotFoundError(f"{file_path} not found")
 
     results = process_prediction_file(
         file_path=file_path,
-        original_path='/u/home/lj0/Code/LLaMA-Factory-Latest/data/0_my_dataset/coco/coco_test_format.mcml.json'
+        original_path='/u/home/lj0/Code/LLaMA-Factory-Latest/data/0_my_dataset/vindr/qwen2_vindr_input_test_len_2108.json'
     )
 
     batch_data = [
