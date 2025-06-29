@@ -29,6 +29,6 @@ nvidia-smi
 
 cd /home/june/Code/LLaMA-Factory-Latest
 
-sh evaluate_experiments.sh
+bash evaluate_experiments.sh
 
 EOF
