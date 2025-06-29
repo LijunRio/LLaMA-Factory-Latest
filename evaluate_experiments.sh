@@ -5,7 +5,7 @@ llamafactory-cli train \
     --finetuning_type lora \
     --quantization_method bnb \
     --template intern_vl \
-    --system_template "You are a professional medical doctor." \
+    --default_system "You are a professional medical doctor." \
     --flash_attn auto \
     --dataset_dir data \
     --eval_dataset vinder_adkg_test \
