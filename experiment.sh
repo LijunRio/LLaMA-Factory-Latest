@@ -64,18 +64,18 @@ GRADIENT_ACCUMULATION_STEPS=8
 LOGGING_STEPS=5
 run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT Base"
 
-### 🚀 Experiment 1: Qwen 3B
-MODEL_NAME="Qwen2-VL-2B-Instruct"
-OUTPUT_DIR="saves/qwen2_vl-3b/vinder_train_def"
-TRAIN_DATASET="vinder_train_def"
-CUTOFF_LENGTH=4096
-SAVE_STEPS=63
-LEARNING_RATE=3.0e-5
-NUM_TRAIN_EPOCHS=10.0
-PER_DEVICE_TRAIN_BATCH_SIZE=8
-GRADIENT_ACCUMULATION_STEPS=8
-LOGGING_STEPS=5
-run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT DEF"
+# ### 🚀 Experiment 1: Qwen 3B
+# MODEL_NAME="Qwen2-VL-2B-Instruct"
+# OUTPUT_DIR="saves/qwen2_vl-3b/vinder_train_def"
+# TRAIN_DATASET="vinder_train_def"
+# CUTOFF_LENGTH=4096
+# SAVE_STEPS=16
+# LEARNING_RATE=3.0e-5
+# NUM_TRAIN_EPOCHS=10.0
+# PER_DEVICE_TRAIN_BATCH_SIZE=8
+# GRADIENT_ACCUMULATION_STEPS=8
+# LOGGING_STEPS=5
+# run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT DEF"
 
 
 # ### 🚀 Experiment 3: Qwen 3B COT
