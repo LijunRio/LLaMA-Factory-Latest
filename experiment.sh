@@ -51,11 +51,11 @@ run_experiment () {
 }
 
 
-### 🚀 Experiment 1: Qwen 3B
-MODEL_NAME="Qwen2-VL-2B-Instruct"
+### 🚀 Experiment 1
+MODEL_NAME="/home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-2B-Instruct/"
 OUTPUT_DIR="saves/qwen2_vl-3b/vindr_sft_base"
 TRAIN_DATASET="vinder_train_base"
-CUTOFF_LENGTH=4096
+CUTOFF_LENGTH=1024
 SAVE_STEPS=63
 LEARNING_RATE=3.0e-5
 NUM_TRAIN_EPOCHS=10.0
@@ -77,17 +77,3 @@ run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT Base"
 # LOGGING_STEPS=5
 # run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT DEF"
 
-
-# ### 🚀 Experiment 3: Qwen 3B COT
-# MODEL_NAME="Qwen/Qwen2.5-VL-3B-Instruct"
-# OUTPUT_DIR="saves/qwen2_5_vl-3b/vindr_cot"
-# TRAIN_DATASET="vindr_qwen25_cot_train"
-# CUTOFF_LENGTH=4096
-# SAVE_STEPS=9
-# LEARNING_RATE=3.0e-5
-# NUM_TRAIN_EPOCHS=20.0
-# PER_DEVICE_TRAIN_BATCH_SIZE=4
-# GRADIENT_ACCUMULATION_STEPS=16
-# # PER_DEVICE_EVAL_BATCH_SIZE=16
-# LOGGING_STEPS=5
-# run_experiment "Experiment 2: Qwen-25VL 3B COT"
