@@ -11,7 +11,7 @@ if ! enroot list | grep -q "llamafactory"; then
     enroot create -n llamafactory /dss/dsshome1/01/go68zuc2/llamafactory.sqsh  
     if [ $? -ne 0 ]; then
         echo "Failed to create llamafactory container"
-        exit 1
+        exit 1s
     fi
     echo "Container llamafactory created successfully."
 else

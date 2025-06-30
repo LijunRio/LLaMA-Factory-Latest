@@ -3,7 +3,7 @@
 # 原始配置文件
 CONFIG_FILE="examples/train_full/qwen2_5vl_full_sft.yaml"
 # 用于保存修改后的副本
-MODIFIED_CONFIG_FILE="examples/train_full/qwen2_5vl_sft_modified.yaml"
+MODIFIED_CONFIG_FILE="examples/train_full/qwen2_vl_sft_modified_base.yaml"
 
 # 运行实验的通用函数
 run_experiment () {
