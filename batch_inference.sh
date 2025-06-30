@@ -8,7 +8,7 @@ TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 for model_name in "${MODELS[@]}"; do
     # 设置路径
     CHECKPOINT_DIR="saves/$model_name/${FILES[0]}"
-    OUTPUT_DIR="./evaluate_outputs/train_results/${EVAL_DATASET}__${TIMESTAMP}/${FILES[0]}/$model_name"
+    OUTPUT_DIR="./evaluate_outputs/train_results/${EVAL_DATASET}/${FILES[0]}/$model_name"
     echo "Checkpoint directory: $CHECKPOINT_DIR"
     echo "Output directory: $OUTPUT_DIR"
 
