@@ -1,0 +1,521 @@
+Container llamafactory already exists.
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 24.07 (build 100464919)
+PyTorch Version 2.4.0a0+3bcc3cd
+Container image Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+ERROR: This container was built for NVIDIA Driver Release 555.42 or later, but
+       version 535.247.01 was detected and compatibility mode is UNAVAILABLE.
+
+       [[]]
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+Mon Jun 30 14:22:37 2025       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.247.01             Driver Version: 535.247.01   CUDA Version: 12.5     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  | 00000000:07:00.0 Off |                    0 |
+| N/A   32C    P0              52W / 400W |      0MiB / 40960MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   1  NVIDIA A100-SXM4-40GB          On  | 00000000:0F:00.0 Off |                    0 |
+| N/A   33C    P0              55W / 400W |      0MiB / 40960MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   2  NVIDIA A100-SXM4-40GB          On  | 00000000:90:00.0 Off |                    0 |
+| N/A   39C    P0              64W / 400W |      0MiB / 40960MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+|   3  NVIDIA A100-SXM4-40GB          On  | 00000000:B7:00.0 Off |                    0 |
+| N/A   39C    P0              56W / 400W |      0MiB / 40960MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+🚀 Running experiment: Experiment 1:Qwen2-VL-2B-Instruct SFT Base
+-----------------------------------
+Model: Qwen2-VL-2B-Instruct
+Output Dir: saves/qwen2_vl-3b/vindr_sft_base
+Train Dataset: vinder_train_base
+Cutoff Length: 4096
+Save Steps: 63
+Learning Rate: 3.0e-5
+Num Train Epochs: 10.0
+Logging Steps: 5
+Per Device Train Batch Size: 8
+Gradient Accumulation Steps: 8
+-----------------------------------
+[2025-06-30 14:22:48,384] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+INFO 06-30 14:22:52 [__init__.py:239] Automatically detected platform cuda.
+[INFO|2025-06-30 14:22:55] llamafactory.cli:143 >> Initializing 4 distributed tasks at: 127.0.0.1:47449
+W0630 14:22:57.259000 1410566 site-packages/torch/distributed/run.py:792] 
+W0630 14:22:57.259000 1410566 site-packages/torch/distributed/run.py:792] *****************************************
+W0630 14:22:57.259000 1410566 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0630 14:22:57.259000 1410566 site-packages/torch/distributed/run.py:792] *****************************************
+[2025-06-30 14:23:06,868] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 14:23:07,197] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 14:23:07,435] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 14:23:07,490] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-06-30 14:23:11,172] [INFO] [comm.py:669:init_distributed] cdb=None
+[2025-06-30 14:23:11,174] [INFO] [comm.py:700:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[INFO|2025-06-30 14:23:11] llamafactory.hparams.parser:406 >> Process rank: 0, world size: 4, device: cuda:0, distributed training: True, compute dtype: torch.bfloat16
+[2025-06-30 14:23:11,358] [INFO] [comm.py:669:init_distributed] cdb=None
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank0]:     response.raise_for_status()
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank0]:     raise HTTPError(http_error_msg, response=self)
+[rank0]: requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 470, in cached_files
+[rank0]:     hf_hub_download(
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 961, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1068, in _hf_hub_download_to_cache_dir
+[rank0]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1596, in _raise_on_head_call_error
+[rank0]:     raise head_call_error
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1484, in _get_metadata_or_catch_error
+[rank0]:     metadata = get_hf_file_metadata(
+[rank0]:                ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1401, in get_hf_file_metadata
+[rank0]:     r = _request_wrapper(
+[rank0]:         ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 285, in _request_wrapper
+[rank0]:     response = _request_wrapper(
+[rank0]:                ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+[rank0]:     hf_raise_for_status(response)
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank0]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank0]: huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-686281af-697d5e3e0992a9f312a35580;fbc1b1b4-2d80-4414-a7b4-9ed18cd68086)
+
+[rank0]: Repository Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json.
+[rank0]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank0]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 82, in load_tokenizer
+[rank0]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 950, in from_pretrained
+[rank0]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 782, in get_tokenizer_config
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:                            ^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 312, in cached_file
+[rank0]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 502, in cached_files
+[rank0]:     raise OSError(
+[rank0]: OSError: Qwen2-VL-2B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank0]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 23, in <module>
+[rank0]:     launch()
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 19, in launch
+[rank0]:     run_exp()
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 110, in run_exp
+[rank0]:     _training_function(config={"args": args, "callbacks": callbacks})
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 72, in _training_function
+[rank0]:     run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/sft/workflow.py", line 48, in run_sft
+[rank0]:     tokenizer_module = load_tokenizer(model_args)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 97, in load_tokenizer
+[rank0]:     raise OSError("Failed to load tokenizer.") from e
+[rank0]: OSError: Failed to load tokenizer.
+[2025-06-30 14:23:11,700] [INFO] [comm.py:669:init_distributed] cdb=None
+[2025-06-30 14:23:11,816] [INFO] [comm.py:669:init_distributed] cdb=None
+[INFO|2025-06-30 14:23:11] llamafactory.hparams.parser:406 >> Process rank: 3, world size: 4, device: cuda:3, distributed training: True, compute dtype: torch.bfloat16
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank3]:     response.raise_for_status()
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank3]:     raise HTTPError(http_error_msg, response=self)
+[rank3]: requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 470, in cached_files
+[rank3]:     hf_hub_download(
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank3]:     return fn(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 961, in hf_hub_download
+[rank3]:     return _hf_hub_download_to_cache_dir(
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1068, in _hf_hub_download_to_cache_dir
+[rank3]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1596, in _raise_on_head_call_error
+[rank3]:     raise head_call_error
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1484, in _get_metadata_or_catch_error
+[rank3]:     metadata = get_hf_file_metadata(
+[rank3]:                ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank3]:     return fn(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1401, in get_hf_file_metadata
+[rank3]:     r = _request_wrapper(
+[rank3]:         ^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 285, in _request_wrapper
+[rank3]:     response = _request_wrapper(
+[rank3]:                ^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+[rank3]:     hf_raise_for_status(response)
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank3]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank3]: huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-686281b0-0b5d598e3e26f6e4390798e9;155da6f8-da02-40d5-9a41-e842bfdb0f97)
+
+[rank3]: Repository Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json.
+[rank3]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank3]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 82, in load_tokenizer
+[rank3]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank3]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 950, in from_pretrained
+[rank3]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank3]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 782, in get_tokenizer_config
+[rank3]:     resolved_config_file = cached_file(
+[rank3]:                            ^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 312, in cached_file
+[rank3]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 502, in cached_files
+[rank3]:     raise OSError(
+[rank3]: OSError: Qwen2-VL-2B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank3]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+
+[rank3]: The above exception was the direct cause of the following exception:
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 23, in <module>
+[rank3]:     launch()
+[rank3]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 19, in launch
+[rank3]:     run_exp()
+[rank3]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 110, in run_exp
+[rank3]:     _training_function(config={"args": args, "callbacks": callbacks})
+[rank3]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 72, in _training_function
+[rank3]:     run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+[rank3]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/sft/workflow.py", line 48, in run_sft
+[rank3]:     tokenizer_module = load_tokenizer(model_args)
+[rank3]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 97, in load_tokenizer
+[rank3]:     raise OSError("Failed to load tokenizer.") from e
+[rank3]: OSError: Failed to load tokenizer.
+[rank0]:[W630 14:23:12.387252298 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[INFO|2025-06-30 14:23:12] llamafactory.hparams.parser:406 >> Process rank: 1, world size: 4, device: cuda:1, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2025-06-30 14:23:12] llamafactory.hparams.parser:406 >> Process rank: 2, world size: 4, device: cuda:2, distributed training: True, compute dtype: torch.bfloat16
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank1]:     response.raise_for_status()
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank1]:     raise HTTPError(http_error_msg, response=self)
+[rank1]: requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 470, in cached_files
+[rank1]:     hf_hub_download(
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 961, in hf_hub_download
+[rank1]:     return _hf_hub_download_to_cache_dir(
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1068, in _hf_hub_download_to_cache_dir
+[rank1]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1596, in _raise_on_head_call_error
+[rank1]:     raise head_call_error
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1484, in _get_metadata_or_catch_error
+[rank1]:     metadata = get_hf_file_metadata(
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1401, in get_hf_file_metadata
+[rank1]:     r = _request_wrapper(
+[rank1]:         ^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 285, in _request_wrapper
+[rank1]:     response = _request_wrapper(
+[rank1]:                ^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+[rank1]:     hf_raise_for_status(response)
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank1]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank1]: huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-686281b0-79c15bc0015051440a59a054;1fa0f908-799c-432c-9960-dacbc799a0c5)
+
+[rank1]: Repository Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json.
+[rank1]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank1]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 82, in load_tokenizer
+[rank1]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank1]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 950, in from_pretrained
+[rank1]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank1]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 782, in get_tokenizer_config
+[rank1]:     resolved_config_file = cached_file(
+[rank1]:                            ^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 312, in cached_file
+[rank1]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 502, in cached_files
+[rank1]:     raise OSError(
+[rank1]: OSError: Qwen2-VL-2B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank1]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 23, in <module>
+[rank1]:     launch()
+[rank1]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 19, in launch
+[rank1]:     run_exp()
+[rank1]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 110, in run_exp
+[rank1]:     _training_function(config={"args": args, "callbacks": callbacks})
+[rank1]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 72, in _training_function
+[rank1]:     run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+[rank1]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/sft/workflow.py", line 48, in run_sft
+[rank1]:     tokenizer_module = load_tokenizer(model_args)
+[rank1]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 97, in load_tokenizer
+[rank1]:     raise OSError("Failed to load tokenizer.") from e
+[rank1]: OSError: Failed to load tokenizer.
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank2]:     response.raise_for_status()
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank2]:     raise HTTPError(http_error_msg, response=self)
+[rank2]: requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json
+
+[rank2]: The above exception was the direct cause of the following exception:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 470, in cached_files
+[rank2]:     hf_hub_download(
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank2]:     return fn(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 961, in hf_hub_download
+[rank2]:     return _hf_hub_download_to_cache_dir(
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1068, in _hf_hub_download_to_cache_dir
+[rank2]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1596, in _raise_on_head_call_error
+[rank2]:     raise head_call_error
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1484, in _get_metadata_or_catch_error
+[rank2]:     metadata = get_hf_file_metadata(
+[rank2]:                ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank2]:     return fn(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 1401, in get_hf_file_metadata
+[rank2]:     r = _request_wrapper(
+[rank2]:         ^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 285, in _request_wrapper
+[rank2]:     response = _request_wrapper(
+[rank2]:                ^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/file_download.py", line 309, in _request_wrapper
+[rank2]:     hf_raise_for_status(response)
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank2]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank2]: huggingface_hub.errors.RepositoryNotFoundError: 404 Client Error. (Request ID: Root=1-686281b0-6e4e085217a8f62a40a9bcbc;70c32867-8212-4bf1-ab2a-382aea115991)
+
+[rank2]: Repository Not Found for url: https://huggingface.co/Qwen2-VL-2B-Instruct/resolve/main/tokenizer_config.json.
+[rank2]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank2]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+
+[rank2]: The above exception was the direct cause of the following exception:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 82, in load_tokenizer
+[rank2]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank2]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 950, in from_pretrained
+[rank2]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank2]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 782, in get_tokenizer_config
+[rank2]:     resolved_config_file = cached_file(
+[rank2]:                            ^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 312, in cached_file
+[rank2]:     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/utils/hub.py", line 502, in cached_files
+[rank2]:     raise OSError(
+[rank2]: OSError: Qwen2-VL-2B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank2]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+
+[rank2]: The above exception was the direct cause of the following exception:
+
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 23, in <module>
+[rank2]:     launch()
+[rank2]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 19, in launch
+[rank2]:     run_exp()
+[rank2]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 110, in run_exp
+[rank2]:     _training_function(config={"args": args, "callbacks": callbacks})
+[rank2]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 72, in _training_function
+[rank2]:     run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+[rank2]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/sft/workflow.py", line 48, in run_sft
+[rank2]:     tokenizer_module = load_tokenizer(model_args)
+[rank2]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/model/loader.py", line 97, in load_tokenizer
+[rank2]:     raise OSError("Failed to load tokenizer.") from e
+[rank2]: OSError: Failed to load tokenizer.
+W0630 14:23:13.798000 1410566 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1410760 closing signal SIGTERM
+W0630 14:23:13.801000 1410566 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1410761 closing signal SIGTERM
+W0630 14:23:13.801000 1410566 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1410762 closing signal SIGTERM
+E0630 14:23:14.280000 1410566 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1410759) of binary: /root/miniconda3/envs/llamafactory/bin/python
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/llamafactory/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-06-30_14:23:13
+  host      : mcml-dgx-001.ai.lrz.de
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1410759)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/llamafactory/bin/llamafactory-cli", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/cli.py", line 130, in main
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['torchrun', '--nnodes', '1', '--node_rank', '0', '--nproc_per_node', '4', '--master_addr', '127.0.0.1', '--master_port', '47449', '/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py', 'examples/train_full/qwen2_5vl_sft_modified.yaml']' returned non-zero exit status 1.
+### model
+model_name_or_path: Qwen2-VL-2B-Instruct
+image_max_pixels: 262144
+video_max_pixels: 16384
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+freeze_vision_tower: true
+freeze_multi_modal_projector: true
+freeze_language_model: false
+deepspeed: examples/deepspeed/ds_z3_config.json
+
+### dataset
+dataset: vinder_train_base
+template: qwen2_vl
+cutoff_len: 4096
+max_samples: 1000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: saves/qwen2_vl-3b/vindr_sft_base
+logging_steps: 5
+save_steps: 63
+plot_loss: true
+overwrite_output_dir: saves/qwen2_vl-3b/vindr_sft_base
+save_only_model: false
+report_to: none  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 8
+learning_rate: 3.0e-5
+num_train_epochs: 10.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+### eval
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500
