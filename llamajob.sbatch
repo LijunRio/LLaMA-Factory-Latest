@@ -27,7 +27,7 @@ conda activate llamafactory
 
 nvidia-smi
 
-cd /home/june/Code/new_llamafactory
+cd /home/june/Code/LLaMA-Factory-Latest
 
 bash experiment.sh
 
