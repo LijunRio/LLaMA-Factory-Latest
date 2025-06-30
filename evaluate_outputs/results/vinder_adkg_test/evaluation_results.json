@@ -1,0 +1,167 @@
+{
+  "evaluation_metadata": {
+    "timestamp": "2025-06-29T17:11:59.687616",
+    "results_folder": "/u/home/lj0/Code/LLaMA-Factory-Latest/evaluate_outputs/results/vinder_adkg_test",
+    "original_data_path": "/u/home/lj0/Code/LLaMA-Factory-Latest/data/0_my_dataset/vindr/qwen2_vindr_input_test_len_2108.json",
+    "total_models_processed": 4,
+    "classes": [
+      "Pleural thickening",
+      "Aortic enlargement",
+      "Pulmonary fibrosis",
+      "Cardiomegaly",
+      "Nodule/Mass",
+      "Lung Opacity",
+      "Other lesion",
+      "Pleural effusion",
+      "ILD",
+      "Infiltration",
+      "Calcification",
+      "Consolidation",
+      "Atelectasis",
+      "Rib fracture",
+      "Mediastinal shift",
+      "Enlarged PA",
+      "Pneumothorax",
+      "Emphysema",
+      "Lung cavity",
+      "Lung cyst",
+      "Clavicle fracture",
+      "Edema",
+      "None",
+      "Not in the list"
+    ],
+    "configuration": {
+      "bbox_coordinate_scale": 1000,
+      "class_match_threshold": 0.5,
+      "visualize_limit": 20,
+      "default_bbox": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "models": {
+    "Qwen2-VL-7B": {
+      "model_name": "Qwen2-VL-7B",
+      "processing_stats": {
+        "processed_samples": 2108,
+        "skipped_samples": 0,
+        "total_samples": 2108,
+        "valid_pred_count": 2026,
+        "valid_pred_rate": 0.961100569259962,
+        "success_rate": 1.0,
+        "rodeo_pred_total": 1858,
+        "rodeo_gt_total": 2697,
+        "sv_pred_total": 1858,
+        "sv_gt_total": 2697
+      },
+      "rodeo_scores": {
+        "RoDeO/localization": 0.4553963989275998,
+        "RoDeO/shape_matching": 0.3502092382581898,
+        "RoDeO/classification": 0.6557615412577245,
+        "RoDeO/total": 0.4561867451919807
+      },
+      "mean_average_precision": {
+        "map50_95": 0.0005396619476477018,
+        "map50": 0.0027894596089636245,
+        "map75": 8.23792546873265e-05
+      },
+      "visualization_info": {
+        "num_visual_samples": 20,
+        "captions_available": 20
+      }
+    },
+    "InternVL3-2B": {
+      "model_name": "InternVL3-2B",
+      "processing_stats": {
+        "processed_samples": 2108,
+        "skipped_samples": 0,
+        "total_samples": 2108,
+        "valid_pred_count": 2108,
+        "valid_pred_rate": 1.0,
+        "success_rate": 1.0,
+        "rodeo_pred_total": 2109,
+        "rodeo_gt_total": 2697,
+        "sv_pred_total": 2109,
+        "sv_gt_total": 2697
+      },
+      "rodeo_scores": {
+        "RoDeO/localization": 0.4891843083040077,
+        "RoDeO/shape_matching": 0.31181331878801466,
+        "RoDeO/classification": 0.7813194959229058,
+        "RoDeO/total": 0.4593381302780233
+      },
+      "mean_average_precision": {
+        "map50_95": 1.115447951601768e-05,
+        "map50": 0.0001115447951601768,
+        "map75": 0.0
+      },
+      "visualization_info": {
+        "num_visual_samples": 20,
+        "captions_available": 20
+      }
+    },
+    "Qwen2-VL-2B": {
+      "model_name": "Qwen2-VL-2B",
+      "processing_stats": {
+        "processed_samples": 2108,
+        "skipped_samples": 0,
+        "total_samples": 2108,
+        "valid_pred_count": 1991,
+        "valid_pred_rate": 0.9444971537001897,
+        "success_rate": 1.0,
+        "rodeo_pred_total": 2016,
+        "rodeo_gt_total": 2697,
+        "sv_pred_total": 2016,
+        "sv_gt_total": 2697
+      },
+      "rodeo_scores": {
+        "RoDeO/localization": 0.43175083901307365,
+        "RoDeO/shape_matching": 0.2539483407893189,
+        "RoDeO/classification": 0.7310552153125349,
+        "RoDeO/total": 0.39360665083972285
+      },
+      "mean_average_precision": {
+        "map50_95": 3.587288844189742e-05,
+        "map50": 0.00020279136377965046,
+        "map75": 0.0
+      },
+      "visualization_info": {
+        "num_visual_samples": 20,
+        "captions_available": 20
+      }
+    },
+    "InternVL3-8B": {
+      "model_name": "InternVL3-8B",
+      "processing_stats": {
+        "processed_samples": 2108,
+        "skipped_samples": 0,
+        "total_samples": 2108,
+        "valid_pred_count": 2012,
+        "valid_pred_rate": 0.9544592030360531,
+        "success_rate": 1.0,
+        "rodeo_pred_total": 3750,
+        "rodeo_gt_total": 2697,
+        "sv_pred_total": 3750,
+        "sv_gt_total": 2697
+      },
+      "rodeo_scores": {
+        "RoDeO/localization": 0.4196133048978184,
+        "RoDeO/shape_matching": 0.2897090724155542,
+        "RoDeO/classification": 0.5927740355174526,
+        "RoDeO/total": 0.39883814603810247
+      },
+      "mean_average_precision": {
+        "map50_95": 0.0006780157758867032,
+        "map50": 0.002382977275916539,
+        "map75": 0.0
+      },
+      "visualization_info": {
+        "num_visual_samples": 20,
+        "captions_available": 20
+      }
+    }
+  }
+}

@@ -1,4 +1,32 @@
 {
+  "vinder_train_base": {
+    "file_name": "./0_my_dataset/vindr/train_vindr_qwen2_len_16087.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "vinder_train_def": {
+    "file_name": "./0_my_dataset/vindr/train_def_vindr_qwen2_len_16087.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "padchest_gr_test": {
     "file_name": "./0_my_dataset/padchest_gt/padchest_input_data_qwen2_test_len_1285.json",
     "formatting": "sharegpt",
