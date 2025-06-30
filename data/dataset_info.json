@@ -1,4 +1,18 @@
 {
+  "vinder_adkg_def_test": {
+    "file_name": "./0_my_dataset/vindr/qwen2_vindr_input_definition_test_len_2108.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "vinder_train_base": {
     "file_name": "./0_my_dataset/vindr/train_vindr_qwen2_len_16087.json",
     "formatting": "sharegpt",
