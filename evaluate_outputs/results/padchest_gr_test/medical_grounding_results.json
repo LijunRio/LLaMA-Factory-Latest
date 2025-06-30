@@ -1,0 +1,67 @@
+{
+  "evaluation_metadata": {
+    "timestamp": "2025-06-30T15:55:17.991510",
+    "results_folder": "/u/home/lj0/Code/LLaMA-Factory-Latest/evaluate_outputs/results/padchest_gr_test",
+    "original_data_path": "/u/home/lj0/Code/LLaMA-Factory-Latest/data/0_my_dataset/padchest_gt/padchest_input_data_qwen2_test_len_1285.json",
+    "total_models_processed": 4,
+    "bbox_coordinate_scale": 1000
+  },
+  "models": {
+    "Qwen2-VL-7B": {
+      "mAP30": 0.011961722488038277,
+      "mAP50": 0.0027397260273972603,
+      "mAP75": 0.0009372071227741331,
+      "ACC30": 0.07237354085603113,
+      "ACC50": 0.014007782101167316,
+      "Recall30": 0.058749210360075806,
+      "Recall50": 0.011370814908401769,
+      "Shape_Matching": 0.6400511874041337,
+      "Detection_Rate": 0.6700389105058365,
+      "Miss_Rate": 0.9412507896399241,
+      "model_name": "Qwen2-VL-7B",
+      "total_samples": 1285
+    },
+    "InternVL3-2B": {
+      "mAP30": 0.022727272727272728,
+      "mAP50": 0.001180637544273908,
+      "mAP75": 0.0,
+      "ACC30": 0.012451361867704281,
+      "ACC50": 0.0038910505836575876,
+      "Recall30": 0.01010739102969046,
+      "Recall50": 0.003158559696778269,
+      "Shape_Matching": 0.7063001193322784,
+      "Detection_Rate": 0.998443579766537,
+      "Miss_Rate": 0.9898926089703095,
+      "model_name": "InternVL3-2B",
+      "total_samples": 1285
+    },
+    "Qwen2-VL-2B": {
+      "mAP30": 0.0025906735751295338,
+      "mAP50": 0.000706547338671691,
+      "mAP75": 0.00011821728336682824,
+      "ACC30": 0.017120622568093387,
+      "ACC50": 0.004669260700389105,
+      "Recall30": 0.013897662665824383,
+      "Recall50": 0.003790271636133923,
+      "Shape_Matching": 0.6058905272347924,
+      "Detection_Rate": 0.6404669260700389,
+      "Miss_Rate": 0.9861023373341756,
+      "model_name": "Qwen2-VL-2B",
+      "total_samples": 1285
+    },
+    "InternVL3-8B": {
+      "mAP30": 0.003952569169960474,
+      "mAP50": 0.0008340283569641369,
+      "mAP75": 0.0,
+      "ACC30": 0.013229571984435798,
+      "ACC50": 0.0031128404669260703,
+      "Recall30": 0.010739102969046115,
+      "Recall50": 0.002526847757422615,
+      "Shape_Matching": 0.6732539850079804,
+      "Detection_Rate": 0.845136186770428,
+      "Miss_Rate": 0.9892608970309539,
+      "model_name": "InternVL3-8B",
+      "total_samples": 1285
+    }
+  }
+}

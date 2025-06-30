@@ -66,7 +66,7 @@ run_experiment () {
 
 # ### 🚀 Experiment 2
 MODEL_NAME="/home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-2B-Instruct/"
-OUTPUT_DIR="saves/qwen2_vl-3b/vindr_sft_base"
+OUTPUT_DIR="saves/qwen2_vl-3b/vindr_sft_def"
 TRAIN_DATASET="vinder_train_def"
 CUTOFF_LENGTH=1024
 SAVE_STEPS=63
