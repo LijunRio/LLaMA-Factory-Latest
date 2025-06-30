@@ -23,6 +23,10 @@ enroot start --root --mount /dss/dssmcmlfs01/pn39hu/pn39hu-dss-0000/june:/home/j
 source ~/.bashrc
 conda activate llamafactory
 
+# 设置文件描述符限制
+ulimit -n 8192
+echo "File descriptor limit set to: \$(ulimit -n)"
+
 nvidia-smi
 
 cd /home/june/Code/LLaMA-Factory-Latest
