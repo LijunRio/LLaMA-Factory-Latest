@@ -1,7 +1,7 @@
 #!/bin/bash
 
-declare -a FILES=("vindr_sft_def")  # 修改为实际的目录名 vindr_sft_def,vindr_sft_base
-EVAL_DATASET="vinder_adkg_def_test" # vinder_adkg_def_test,vinder_adkg_test
+declare -a FILES=("vindr_sft_base")  # 修改为实际的目录名 vindr_sft_def,vindr_sft_base
+EVAL_DATASET="vinder_adkg_test" # vinder_adkg_def_test,vinder_adkg_test
 declare -a MODELS=("qwen2_vl-3b")  # 修改为实际的模型名
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 
