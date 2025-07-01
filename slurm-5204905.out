@@ -1,0 +1,1219 @@
+Container llamafactory already exists.
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 24.07 (build 100464919)
+PyTorch Version 2.4.0a0+3bcc3cd
+Container image Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+ERROR: This container was built for NVIDIA Driver Release 555.42 or later, but
+       version 535.247.01 was detected and compatibility mode is UNAVAILABLE.
+
+       [[]]
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+Tue Jul  1 18:13:39 2025       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.247.01             Driver Version: 535.247.01   CUDA Version: 12.5     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  | 00000000:4E:00.0 Off |                    0 |
+| N/A   31C    P0              51W / 400W |      0MiB / 40960MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Checkpoint directory: saves/qwen2_vl-3b/vindr_sft_base
+Output directory: ./evaluate_outputs/train_results/vinder_adkg_test/vindr_sft_base/qwen2_vl-3b
+Processing model: qwen2_vl-3b
+Running inference on checkpoint: checkpoint-126
+INFO 07-01 18:13:48 [__init__.py:239] Automatically detected platform cuda.
+[INFO|training_args.py:2135] 2025-07-01 18:13:50,246 >> PyTorch: setting up devices
+[INFO|training_args.py:1812] 2025-07-01 18:13:50,316 >> The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,336 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,336 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,336 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,336 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,337 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,337 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,337 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:13:50,726 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|image_processing_base.py:378] 2025-07-01 18:13:50,727 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/preprocessor_config.json
+[INFO|image_processing_base.py:378] 2025-07-01 18:13:50,732 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-01 18:13:50,738 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,739 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,739 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,739 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,739 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,739 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,739 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:13:50,739 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:13:51,121 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:627] 2025-07-01 18:13:51,123 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/video_preprocessor_config.json
+[INFO|video_processing_utils.py:683] 2025-07-01 18:13:51,322 >> Video processor Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:990] 2025-07-01 18:13:51,773 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[INFO|configuration_utils.py:696] 2025-07-01 18:13:51,829 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/config.json
+[INFO|configuration_utils.py:696] 2025-07-01 18:13:51,829 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/config.json
+[INFO|configuration_utils.py:770] 2025-07-01 18:13:51,831 >> Model config Qwen2VLConfig {
+  "architectures": [
+    "Qwen2VLForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "hidden_act": "silu",
+  "hidden_size": 1536,
+  "image_token_id": 151655,
+  "initializer_range": 0.02,
+  "intermediate_size": 8960,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen2_vl",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "mrope_section": [
+      16,
+      24,
+      24
+    ],
+    "rope_type": "default",
+    "type": "default"
+  },
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "text_config": {
+    "architectures": [
+      "Qwen2VLForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 1536,
+    "image_token_id": null,
+    "initializer_range": 0.02,
+    "intermediate_size": 8960,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_vl_text",
+    "num_attention_heads": 12,
+    "num_hidden_layers": 28,
+    "num_key_value_heads": 2,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        24,
+        24
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "sliding_window": 32768,
+    "tie_word_embeddings": true,
+    "torch_dtype": "float32",
+    "use_cache": false,
+    "use_sliding_window": false,
+    "video_token_id": null,
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vision_token_id": 151654,
+    "vocab_size": 151936
+  },
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.52.4",
+  "use_cache": false,
+  "use_sliding_window": false,
+  "video_token_id": 151656,
+  "vision_config": {
+    "depth": 32,
+    "embed_dim": 1280,
+    "hidden_act": "quick_gelu",
+    "hidden_size": 1536,
+    "in_channels": 3,
+    "in_chans": 3,
+    "initializer_range": 0.02,
+    "mlp_ratio": 4,
+    "model_type": "qwen2_vl",
+    "num_heads": 16,
+    "patch_size": 14,
+    "spatial_merge_size": 2,
+    "spatial_patch_size": 14,
+    "temporal_patch_size": 2,
+    "torch_dtype": "float32"
+  },
+  "vision_end_token_id": 151653,
+  "vision_start_token_id": 151652,
+  "vision_token_id": 151654,
+  "vocab_size": 151936
+}
+
+INFO 07-01 18:14:04 [config.py:689] This model supports multiple tasks: {'classify', 'embed', 'reward', 'generate', 'score'}. Defaulting to 'generate'.
+INFO 07-01 18:14:04 [llm_engine.py:243] Initializing a V0 LLM engine (v0.8.4) with config: model='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126', speculative_config=None, tokenizer='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=6144, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":[],"compile_sizes":[],"cudagraph_capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":256}, use_cached_outputs=False, 
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:04,034 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:04,034 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:04,034 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:04,034 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:04,034 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:04,034 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:04,034 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:14:04,381 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:1088] 2025-07-01 18:14:04,485 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/generation_config.json
+[INFO|configuration_utils.py:1135] 2025-07-01 18:14:04,488 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.01,
+  "top_k": 1,
+  "top_p": 0.001
+}
+
+INFO 07-01 18:14:05 [cuda.py:292] Using Flash Attention backend.
+INFO 07-01 18:14:06 [parallel_state.py:959] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0
+INFO 07-01 18:14:06 [model_runner.py:1110] Starting to load model saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126...
+WARNING 07-01 18:14:06 [vision.py:93] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 07-01 18:14:06 [config.py:3466] cudagraph sizes specified by model runner [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256] is overridden by config [256, 128, 2, 1, 4, 136, 8, 144, 16, 152, 24, 160, 32, 168, 40, 176, 48, 184, 56, 192, 64, 200, 72, 208, 80, 216, 88, 120, 224, 96, 232, 104, 240, 112, 248]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.47s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.47s/it]
+
+INFO 07-01 18:14:09 [loader.py:458] Loading weights took 2.68 seconds
+INFO 07-01 18:14:09 [model_runner.py:1146] Model loading took 4.1513 GiB and 2.929853 seconds
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:09,747 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:09,747 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:09,747 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:09,747 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:09,747 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:09,747 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:09,747 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:14:10,171 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|image_processing_base.py:378] 2025-07-01 18:14:10,270 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-01 18:14:10,270 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|image_processing_base.py:378] 2025-07-01 18:14:10,270 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-01 18:14:10,271 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:10,271 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:10,271 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:10,271 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:10,271 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:10,271 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:10,271 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:14:10,271 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:14:11,057 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:627] 2025-07-01 18:14:11,058 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/video_preprocessor_config.json
+[INFO|video_processing_utils.py:683] 2025-07-01 18:14:11,058 >> Video processor Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:990] 2025-07-01 18:14:11,565 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: CachedQwen2TokenizerFast(name_or_path='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='left', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[WARNING|image_utils.py:939] 2025-07-01 18:14:12,238 >> Unused or unrecognized kwargs: return_tensors.
+WARNING 07-01 18:14:12 [model_runner.py:1311] Computed max_num_seqs (min(256, 6144 // 98304)) to be less than 1. Setting it to the minimum value of 1.
+[WARNING|image_utils.py:939] 2025-07-01 18:14:15,389 >> Unused or unrecognized kwargs: return_tensors.
+[WARNING|tokenization_utils_base.py:3934] 2025-07-01 18:14:16,466 >> Token indices sequence length is longer than the specified maximum sequence length for this model (98304 > 32768). Running this sequence through the model will result in indexing errors
+WARNING 07-01 18:14:16 [profiling.py:245] The sequence length used for profiling (max_num_batched_tokens / max_num_seqs = 6144) is too short to hold the multi-modal embeddings in the worst case (98304 tokens in total, out of which {'image': 65536, 'video': 32768} are reserved for multi-modal embeddings). This may cause certain multi-modal inputs to fail during inference, even when the input text is short. To avoid this, you should increase `max_model_len`, reduce `max_num_seqs`, and/or reduce `mm_counts`.
+INFO 07-01 18:14:54 [worker.py:267] Memory profiling takes 44.82 seconds
+INFO 07-01 18:14:54 [worker.py:267] the current vLLM instance can use total_gpu_memory (39.39GiB) x gpu_memory_utilization (0.90) = 35.45GiB
+INFO 07-01 18:14:54 [worker.py:267] model weights take 4.15GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 14.59GiB; the rest of the memory reserved for KV Cache is 16.62GiB.
+INFO 07-01 18:14:54 [executor_base.py:112] # cuda blocks: 38908, # CPU blocks: 9362
+INFO 07-01 18:14:54 [executor_base.py:117] Maximum concurrency for 6144 tokens per request: 101.32x
+INFO 07-01 18:15:00 [model_runner.py:1456] Capturing cudagraphs for decoding. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI. If out-of-memory error occurs during cudagraph capture, consider decreasing `gpu_memory_utilization` or switching to eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+Capturing CUDA graph shapes:   0%|          | 0/35 [00:00<?, ?it/s]Capturing CUDA graph shapes:   3%|▎         | 1/35 [00:00<00:17,  1.95it/s]Capturing CUDA graph shapes:   6%|▌         | 2/35 [00:01<00:17,  1.93it/s]Capturing CUDA graph shapes:   9%|▊         | 3/35 [00:01<00:16,  1.94it/s]Capturing CUDA graph shapes:  11%|█▏        | 4/35 [00:02<00:15,  1.97it/s]Capturing CUDA graph shapes:  14%|█▍        | 5/35 [00:02<00:15,  1.97it/s]Capturing CUDA graph shapes:  17%|█▋        | 6/35 [00:03<00:14,  1.97it/s]Capturing CUDA graph shapes:  20%|██        | 7/35 [00:03<00:14,  1.98it/s]Capturing CUDA graph shapes:  23%|██▎       | 8/35 [00:04<00:13,  1.97it/s]Capturing CUDA graph shapes:  26%|██▌       | 9/35 [00:04<00:13,  1.98it/s]Capturing CUDA graph shapes:  29%|██▊       | 10/35 [00:05<00:12,  1.99it/s]Capturing CUDA graph shapes:  31%|███▏      | 11/35 [00:05<00:12,  1.99it/s]Capturing CUDA graph shapes:  34%|███▍      | 12/35 [00:06<00:11,  2.00it/s]Capturing CUDA graph shapes:  37%|███▋      | 13/35 [00:06<00:11,  2.00it/s]Capturing CUDA graph shapes:  40%|████      | 14/35 [00:07<00:10,  2.00it/s]Capturing CUDA graph shapes:  43%|████▎     | 15/35 [00:07<00:10,  2.00it/s]Capturing CUDA graph shapes:  46%|████▌     | 16/35 [00:08<00:09,  2.00it/s]Capturing CUDA graph shapes:  49%|████▊     | 17/35 [00:08<00:08,  2.01it/s]Capturing CUDA graph shapes:  51%|█████▏    | 18/35 [00:09<00:08,  2.00it/s]Capturing CUDA graph shapes:  54%|█████▍    | 19/35 [00:09<00:08,  1.99it/s]Capturing CUDA graph shapes:  57%|█████▋    | 20/35 [00:10<00:07,  1.99it/s]Capturing CUDA graph shapes:  60%|██████    | 21/35 [00:10<00:06,  2.00it/s]Capturing CUDA graph shapes:  63%|██████▎   | 22/35 [00:11<00:06,  1.99it/s]Capturing CUDA graph shapes:  66%|██████▌   | 23/35 [00:11<00:06,  1.99it/s]Capturing CUDA graph shapes:  69%|██████▊   | 24/35 [00:12<00:05,  1.99it/s]Capturing CUDA graph shapes:  71%|███████▏  | 25/35 [00:12<00:05,  2.00it/s]Capturing CUDA graph shapes:  74%|███████▍  | 26/35 [00:13<00:04,  1.98it/s]Capturing CUDA graph shapes:  77%|███████▋  | 27/35 [00:13<00:04,  1.98it/s]Capturing CUDA graph shapes:  80%|████████  | 28/35 [00:14<00:03,  1.97it/s]Capturing CUDA graph shapes:  83%|████████▎ | 29/35 [00:14<00:03,  1.97it/s]Capturing CUDA graph shapes:  86%|████████▌ | 30/35 [00:15<00:02,  1.97it/s]Capturing CUDA graph shapes:  89%|████████▊ | 31/35 [00:15<00:02,  1.99it/s]Capturing CUDA graph shapes:  91%|█████████▏| 32/35 [00:16<00:01,  1.99it/s]Capturing CUDA graph shapes:  94%|█████████▍| 33/35 [00:16<00:01,  1.99it/s]Capturing CUDA graph shapes:  97%|█████████▋| 34/35 [00:17<00:00,  2.00it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:17<00:00,  1.98it/s]Capturing CUDA graph shapes: 100%|██████████| 35/35 [00:17<00:00,  1.98it/s]
+INFO 07-01 18:15:17 [model_runner.py:1598] Graph capturing finished in 18 secs, took 0.33 GiB
+INFO 07-01 18:15:17 [llm_engine.py:449] init engine (profile, create kv cache, warmup model) took 68.17 seconds
+[INFO|2025-07-01 18:15:18] llamafactory.data.loader:143 >> Loading dataset ./0_my_dataset/vindr/qwen2_vindr_input_test_len_2108.json...
+training example:
+input_ids:
+[151644, 8948, 198, 2610, 525, 264, 10950, 17847, 13, 151645, 198, 151644, 872, 198, 151652, 151655, 151653, 198, 5598, 30618, 14697, 315, 364, 47, 811, 372, 8767, 269, 706, 6, 5671, 438, 4718, 3561, 510, 73594, 2236, 198, 9640, 4913, 58456, 62, 17, 67, 788, 508, 87, 16, 11, 379, 16, 11, 856, 17, 11, 379, 17, 1125, 330, 1502, 788, 330, 1502, 7115, 9338, 921, 73594, 151645, 198, 151644, 77091, 198]
+inputs:
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|image_pad|><|vision_end|>
+Return bounding boxes of 'Pneumothorax' areas as JSON format:
+```json
+[
+{"bbox_2d": [x1, y1, x2, y2], "label": "label"},
+...
+]
+```<|im_end|>
+<|im_start|>assistant
+
+label_ids:
+[27, 9217, 397, 9640, 220, 341, 262, 330, 58456, 62, 17, 67, 788, 2278, 414, 220, 16, 22, 20, 345, 414, 220, 17, 22, 24, 345, 414, 220, 18, 15, 17, 345, 414, 220, 21, 23, 16, 198, 262, 3211, 262, 330, 1502, 788, 330, 47, 811, 372, 8767, 269, 706, 698, 220, 456, 921, 522, 9217, 29, 151645, 198]
+labels:
+<answer>
+[
+  {
+    "bbox_2d": [
+      175,
+      279,
+      302,
+      681
+    ],
+    "label": "Pneumothorax"
+  }
+]
+</answer><|im_end|>
+
+Processing batched inference:   0%|          | 0/66 [00:00<?, ?it/s][INFO|image_processing_base.py:378] 2025-07-01 18:15:18,755 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-01 18:15:18,755 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:15:18,757 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:15:18,757 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:15:18,757 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:15:18,757 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:15:18,757 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:15:18,757 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:15:18,757 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:15:19,565 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:627] 2025-07-01 18:15:19,566 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126/video_preprocessor_config.json
+[INFO|video_processing_utils.py:683] 2025-07-01 18:15:19,566 >> Video processor Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:990] 2025-07-01 18:15:20,038 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: CachedQwen2TokenizerFast(name_or_path='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-126', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='left', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:53,  1.73s/it, est. speed input: 225.72 toks/s, output: 31.25 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:02<00:00, 18.52it/s, est. speed input: 5466.97 toks/s, output: 817.73 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:02<00:00, 15.51it/s, est. speed input: 6093.94 toks/s, output: 993.92 toks/s]
+Processing batched inference:   2%|▏         | 1/66 [00:04<04:36,  4.26s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.63 toks/s, output: 42.85 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.54it/s, est. speed input: 7040.91 toks/s, output: 1045.07 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.86it/s, est. speed input: 7801.51 toks/s, output: 1273.24 toks/s]
+Processing batched inference:   3%|▎         | 2/66 [00:06<03:25,  3.22s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 306.46 toks/s, output: 42.43 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.41it/s, est. speed input: 7600.30 toks/s, output: 1128.49 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.02it/s, est. speed input: 7864.92 toks/s, output: 1228.46 toks/s]
+Processing batched inference:   5%|▍         | 3/66 [00:09<03:00,  2.87s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 306.58 toks/s, output: 42.45 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.45it/s, est. speed input: 7604.50 toks/s, output: 1124.26 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.66it/s, est. speed input: 8107.20 toks/s, output: 1251.97 toks/s]
+Processing batched inference:   6%|▌         | 4/66 [00:11<02:45,  2.67s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.80 toks/s, output: 42.87 toks/s][A
+Processed prompts:  78%|███████▊  | 25/32 [00:01<00:00, 20.92it/s, est. speed input: 6268.51 toks/s, output: 932.44 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.81it/s, est. speed input: 7778.17 toks/s, output: 1356.30 toks/s]
+Processing batched inference:   8%|▊         | 5/66 [00:14<02:39,  2.62s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 306.48 toks/s, output: 42.44 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.34it/s, est. speed input: 7861.37 toks/s, output: 1158.77 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.68it/s, est. speed input: 8112.55 toks/s, output: 1222.62 toks/s]
+Processing batched inference:   9%|▉         | 6/66 [00:16<02:31,  2.53s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 306.30 toks/s, output: 42.41 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.82it/s, est. speed input: 7116.50 toks/s, output: 1054.36 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.93it/s, est. speed input: 7825.66 toks/s, output: 1271.36 toks/s]
+Processing batched inference:  11%|█         | 7/66 [00:18<02:28,  2.51s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 306.08 toks/s, output: 42.38 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.54it/s, est. speed input: 7057.23 toks/s, output: 1050.78 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.91it/s, est. speed input: 7819.72 toks/s, output: 1275.39 toks/s]
+Processing batched inference:  12%|█▏        | 8/66 [00:21<02:23,  2.48s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 305.96 toks/s, output: 42.36 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.31it/s, est. speed input: 7567.40 toks/s, output: 1118.23 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.56it/s, est. speed input: 8067.37 toks/s, output: 1245.28 toks/s]
+Processing batched inference:  14%|█▎        | 9/66 [00:23<02:18,  2.43s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 302.79 toks/s, output: 42.59 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.46it/s, est. speed input: 7013.12 toks/s, output: 1041.95 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.79it/s, est. speed input: 7770.41 toks/s, output: 1262.80 toks/s]
+Processing batched inference:  15%|█▌        | 10/66 [00:26<02:15,  2.42s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.03 toks/s, output: 42.23 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.49it/s, est. speed input: 7029.62 toks/s, output: 1037.95 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.87it/s, est. speed input: 7793.62 toks/s, output: 1262.82 toks/s]
+Processing batched inference:  17%|█▋        | 11/66 [00:28<02:13,  2.43s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.06 toks/s, output: 42.13 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.40it/s, est. speed input: 7299.53 toks/s, output: 1085.24 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.89it/s, est. speed input: 7812.63 toks/s, output: 1247.20 toks/s]
+Processing batched inference:  18%|█▊        | 12/66 [00:30<02:10,  2.42s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 306.43 toks/s, output: 42.32 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.62it/s, est. speed input: 6787.17 toks/s, output: 1011.44 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.86it/s, est. speed input: 7800.81 toks/s, output: 1303.64 toks/s]
+Processing batched inference:  20%|█▉        | 13/66 [00:33<02:07,  2.40s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.38 toks/s, output: 42.14 toks/s][A
+Processed prompts:  72%|███████▏  | 23/32 [00:01<00:00, 19.00it/s, est. speed input: 5718.74 toks/s, output: 854.13 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.65it/s, est. speed input: 7709.61 toks/s, output: 1387.50 toks/s]
+Processing batched inference:  21%|██        | 14/66 [00:35<02:04,  2.39s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.22 toks/s, output: 42.12 toks/s][A
+Processed prompts:  81%|████████▏ | 26/32 [00:01<00:00, 21.67it/s, est. speed input: 6500.08 toks/s, output: 966.50 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.76it/s, est. speed input: 7758.13 toks/s, output: 1316.17 toks/s]
+Processing batched inference:  23%|██▎       | 15/66 [00:38<02:01,  2.38s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.38 toks/s, output: 42.82 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.65it/s, est. speed input: 6786.86 toks/s, output: 1015.30 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.85it/s, est. speed input: 7799.05 toks/s, output: 1302.00 toks/s]
+Processing batched inference:  24%|██▍       | 16/66 [00:40<01:59,  2.39s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.32 toks/s, output: 42.67 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.34it/s, est. speed input: 7556.90 toks/s, output: 1118.32 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.91it/s, est. speed input: 7818.00 toks/s, output: 1216.30 toks/s]
+Processing batched inference:  26%|██▌       | 17/66 [00:42<01:56,  2.38s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 305.93 toks/s, output: 42.36 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.24it/s, est. speed input: 7841.37 toks/s, output: 1160.76 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.61it/s, est. speed input: 8091.42 toks/s, output: 1224.36 toks/s]
+Processing batched inference:  27%|██▋       | 18/66 [00:45<01:53,  2.36s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
