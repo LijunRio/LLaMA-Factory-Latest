@@ -31,7 +31,7 @@ for model_name in "${MODELS[@]}"; do
             mkdir -p "$save_path"
 
             # 执行 Python 脚本进行推理 (使用贪婪搜索进行测试)
-             env VLLM_USE_V1=0 python scripts/vllm_infer_new.py \
+             env VLLM_USE_V1=0 python scripts/vllm_infer.py \
                 --model_name_or_path "$ckpt" \
                 --dataset $EVAL_DATASET \
                 --template qwen2_vl \
