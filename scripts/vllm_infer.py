@@ -11,10 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-"""
-原始的官方vllm的代码，可以正常运行，但是由于我的测试数据集有1280多个，会报错
-open too many files: [Errno 24] Too many open files
-"""
 
 import gc
 import json
