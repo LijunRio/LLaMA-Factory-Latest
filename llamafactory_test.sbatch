@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
 #SBATCH --time=12:00:00
-#SBATCH --job-name=inference_vindr_sft
+#SBATCH --job-name=vindr_sft_base_infer
 
 if ! enroot list | grep -q "llamafactory"; then
     echo "Container llamafactory not found. Creating container..."
