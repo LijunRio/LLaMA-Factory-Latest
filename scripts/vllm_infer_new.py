@@ -279,7 +279,8 @@ def safe_process_multimodal_data(template_obj, sample_data, sample_type, **kwarg
                 sample_data,
                 sampling_rate=kwargs.get('sampling_rate', 16000),
             )
-            return {"audio": zip(audio_data["audios"], audio_data["sampling_rates"])}
+            # 修复：返回 list 而不是 zip 对象
+            return {"audio": list(zip(audio_data["audios"], audio_data["sampling_rates"]))}
         else:
             return None
     except Exception as e:
