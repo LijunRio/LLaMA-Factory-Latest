@@ -55,7 +55,7 @@ def vllm_infer(
     image_min_pixels: int = 32 * 32,
     video_fps: float = 2.0,
     video_maxlen: int = 128,
-    batch_size: int = 1024,
+    batch_size: int = 32,  # Reduced default batch size for more stable multi-modal processing
 ):
     r"""Perform batch generation using vLLM engine, which supports tensor parallelism.
 
@@ -130,59 +130,75 @@ def vllm_infer(
     all_prompts = []
     all_preds = []
     all_labels = []
+    
+    # Adjust batch size if processing multi-modal data
+    has_multi_modal = any(
+        hasattr(train_dataset[0], attr) and train_dataset[0][attr] is not None
+        for attr in ["images", "videos", "audios"]
+    )
+    if has_multi_modal and batch_size > 32:
+        print("Multi-modal data detected. Reducing batch size to 32 for stability.")
+        batch_size = 32
 
     # Add batch process to avoid the issue of too many files opened
     for i in tqdm(range(0, len(train_dataset), batch_size), desc="Processing batched inference"):
         vllm_inputs, prompts, labels = [], [], []
-
         batch = train_dataset[i : min(i + batch_size, len(train_dataset))]
 
-        for j in range(len(batch["input_ids"])):
-            if batch["images"][j] is not None:
-                image = batch["images"][j]
-                multi_modal_data = {
-                    "image": template_obj.mm_plugin._regularize_images(
-                        image, image_max_pixels=image_max_pixels, image_min_pixels=image_min_pixels
-                    )["images"]
-                }
-            elif batch["videos"][j] is not None:
-                video = batch["videos"][j]
-                multi_modal_data = {
-                    "video": template_obj.mm_plugin._regularize_videos(
-                        video,
-                        image_max_pixels=image_max_pixels,
-                        image_min_pixels=image_min_pixels,
-                        video_fps=video_fps,
-                        video_maxlen=video_maxlen,
-                    )["videos"]
-                }
-            elif batch["audios"][j] is not None:
-                audio = batch["audios"][j]
-                audio_data = template_obj.mm_plugin._regularize_audios(
-                    audio,
-                    sampling_rate=16000,
-                )
-                multi_modal_data = {"audio": zip(audio_data["audios"], audio_data["sampling_rates"])}
-            else:
+        try:
+            for j in range(len(batch["input_ids"])):
                 multi_modal_data = None
+                try:
+                    if batch["images"][j] is not None:
+                        image = batch["images"][j]
+                        multi_modal_data = {
+                            "image": template_obj.mm_plugin._regularize_images(
+                                image, image_max_pixels=image_max_pixels, image_min_pixels=image_min_pixels
+                            )["images"]
+                        }
+                    elif batch["videos"][j] is not None:
+                        video = batch["videos"][j]
+                        multi_modal_data = {
+                            "video": template_obj.mm_plugin._regularize_videos(
+                                video,
+                                image_max_pixels=image_max_pixels,
+                                image_min_pixels=image_min_pixels,
+                                video_fps=video_fps,
+                                video_maxlen=video_maxlen,
+                            )["videos"]
+                        }
+                    elif batch["audios"][j] is not None:
+                        audio = batch["audios"][j]
+                        audio_data = template_obj.mm_plugin._regularize_audios(
+                            audio,
+                            sampling_rate=16000,
+                        )
+                        multi_modal_data = {"audio": list(zip(audio_data["audios"], audio_data["sampling_rates"]))}
+                except Exception as e:
+                    print(f"Warning: Error processing multi-modal data for item {i+j}: {str(e)}")
+                    multi_modal_data = None
 
-            vllm_inputs.append({"prompt_token_ids": batch["input_ids"][j], "multi_modal_data": multi_modal_data})
-            prompts.append(tokenizer.decode(batch["input_ids"][j], skip_special_tokens=skip_special_tokens))
-            labels.append(
-                tokenizer.decode(
-                    list(filter(lambda x: x != IGNORE_INDEX, batch["labels"][j])),
-                    skip_special_tokens=skip_special_tokens,
+                vllm_inputs.append({"prompt_token_ids": batch["input_ids"][j], "multi_modal_data": multi_modal_data})
+                prompts.append(tokenizer.decode(batch["input_ids"][j], skip_special_tokens=skip_special_tokens))
+                labels.append(
+                    tokenizer.decode(
+                        list(filter(lambda x: x != IGNORE_INDEX, batch["labels"][j])),
+                        skip_special_tokens=skip_special_tokens,
+                    )
                 )
-            )
 
-        results = llm.generate(vllm_inputs, sampling_params, lora_request=lora_request)
+            results = llm.generate(vllm_inputs, sampling_params, lora_request=lora_request)
+            preds = [result.outputs[0].text for result in results]
 
-        preds = [result.outputs[0].text for result in results]
+            # Accumulate results
+            all_prompts.extend(prompts)
+            all_preds.extend(preds)
+            all_labels.extend(labels)
 
-        # Accumulate results
-        all_prompts.extend(prompts)
-        all_preds.extend(preds)
-        all_labels.extend(labels)
+        except Exception as e:
+            print(f"Error processing batch {i//batch_size}: {str(e)}")
+            print("Attempting to continue with next batch...")
+            continue
 
         gc.collect()
     # Write all results at once outside the loop
