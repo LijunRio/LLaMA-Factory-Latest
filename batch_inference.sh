@@ -17,9 +17,6 @@ for model_name in "${MODELS[@]}"; do
     echo "Processing model: $model_name"
     mkdir -p "$OUTPUT_DIR"
     
-    # Check system resources before processing
-    echo "Debugging file descriptor limits:"
-    python debug_file_limits.py
 
     # 遍历每个 checkpoint
     for ckpt in $CHECKPOINT_DIR/checkpoint-*; do
