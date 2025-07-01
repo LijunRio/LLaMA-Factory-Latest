@@ -1217,3 +1217,963 @@ labels:
 Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.24it/s, est. speed input: 7841.37 toks/s, output: 1160.76 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.61it/s, est. speed input: 8091.42 toks/s, output: 1224.36 toks/s]
 Processing batched inference:  27%|██▋       | 18/66 [00:45<01:53,  2.36s/it]
 Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.17 toks/s, output: 42.64 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.31it/s, est. speed input: 7552.51 toks/s, output: 1121.49 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.88it/s, est. speed input: 7808.51 toks/s, output: 1215.16 toks/s]
+Processing batched inference:  29%|██▉       | 19/66 [00:47<01:51,  2.37s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.73 toks/s, output: 42.72 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 25.22it/s, est. speed input: 7596.32 toks/s, output: 1130.61 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.95it/s, est. speed input: 7840.90 toks/s, output: 1197.17 toks/s]
+Processing batched inference:  30%|███       | 20/66 [00:49<01:48,  2.36s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.53 toks/s, output: 42.70 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.50it/s, est. speed input: 7030.91 toks/s, output: 1047.31 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.44it/s, est. speed input: 8026.56 toks/s, output: 1300.16 toks/s]
+Processing batched inference:  32%|███▏      | 21/66 [00:52<01:46,  2.36s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.96 toks/s, output: 42.22 toks/s][A
+Processed prompts:  81%|████████▏ | 26/32 [00:01<00:00, 21.70it/s, est. speed input: 6513.67 toks/s, output: 970.69 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.80it/s, est. speed input: 7772.92 toks/s, output: 1323.83 toks/s]
+Processing batched inference:  33%|███▎      | 22/66 [00:54<01:44,  2.37s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.73 toks/s, output: 42.72 toks/s][A
+Processed prompts:  81%|████████▏ | 26/32 [00:01<00:00, 21.74it/s, est. speed input: 6510.13 toks/s, output: 969.08 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.78it/s, est. speed input: 7764.61 toks/s, output: 1316.87 toks/s]
+Processing batched inference:  35%|███▍      | 23/66 [00:56<01:41,  2.35s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 303.99 toks/s, output: 42.09 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.35it/s, est. speed input: 7281.91 toks/s, output: 1078.91 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.83it/s, est. speed input: 7785.32 toks/s, output: 1234.73 toks/s]
+Processing batched inference:  36%|███▋      | 24/66 [00:59<01:38,  2.34s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.98 toks/s, output: 42.76 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.52it/s, est. speed input: 7030.88 toks/s, output: 1043.59 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.85it/s, est. speed input: 7792.64 toks/s, output: 1267.85 toks/s]
+Processing batched inference:  38%|███▊      | 25/66 [01:01<01:35,  2.32s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.49 toks/s, output: 42.16 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.28it/s, est. speed input: 7562.13 toks/s, output: 1125.65 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.91it/s, est. speed input: 7826.07 toks/s, output: 1225.11 toks/s]
+Processing batched inference:  39%|███▉      | 26/66 [01:03<01:32,  2.32s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.37 toks/s, output: 42.28 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.46it/s, est. speed input: 7317.52 toks/s, output: 1084.64 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.93it/s, est. speed input: 7824.25 toks/s, output: 1241.33 toks/s]
+Processing batched inference:  41%|████      | 27/66 [01:06<01:29,  2.30s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.08 toks/s, output: 42.13 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.45it/s, est. speed input: 7027.20 toks/s, output: 1046.21 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.82it/s, est. speed input: 7783.94 toks/s, output: 1267.17 toks/s]
+Processing batched inference:  42%|████▏     | 28/66 [01:08<01:27,  2.29s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 302.26 toks/s, output: 42.52 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.44it/s, est. speed input: 7005.80 toks/s, output: 1040.41 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.77it/s, est. speed input: 7768.59 toks/s, output: 1273.54 toks/s]
+Processing batched inference:  44%|████▍     | 29/66 [01:10<01:24,  2.29s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.35 toks/s, output: 42.14 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.28it/s, est. speed input: 7558.26 toks/s, output: 1121.80 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.52it/s, est. speed input: 8057.54 toks/s, output: 1248.64 toks/s]
+Processing batched inference:  45%|████▌     | 30/66 [01:12<01:21,  2.25s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.26 toks/s, output: 42.13 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.19it/s, est. speed input: 7814.88 toks/s, output: 1152.37 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.55it/s, est. speed input: 8064.55 toks/s, output: 1215.84 toks/s]
+Processing batched inference:  47%|████▋     | 31/66 [01:14<01:18,  2.23s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 304.00 toks/s, output: 42.76 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.51it/s, est. speed input: 7308.94 toks/s, output: 1078.54 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.93it/s, est. speed input: 7821.47 toks/s, output: 1240.24 toks/s]
+Processing batched inference:  48%|████▊     | 32/66 [01:17<01:15,  2.23s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 302.65 toks/s, output: 42.57 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.39it/s, est. speed input: 7285.37 toks/s, output: 1085.96 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.84it/s, est. speed input: 7798.68 toks/s, output: 1251.10 toks/s]
+Processing batched inference:  50%|█████     | 33/66 [01:19<01:14,  2.25s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.76 toks/s, output: 42.09 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.36it/s, est. speed input: 7292.28 toks/s, output: 1086.25 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.85it/s, est. speed input: 7800.59 toks/s, output: 1244.98 toks/s]
+Processing batched inference:  52%|█████▏    | 34/66 [01:21<01:12,  2.28s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 303.98 toks/s, output: 42.09 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.42it/s, est. speed input: 6729.19 toks/s, output: 999.66 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.69it/s, est. speed input: 7727.26 toks/s, output: 1278.84 toks/s]
+Processing batched inference:  53%|█████▎    | 35/66 [01:24<01:10,  2.27s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.25 toks/s, output: 42.26 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.47it/s, est. speed input: 7314.19 toks/s, output: 1082.05 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.94it/s, est. speed input: 7827.01 toks/s, output: 1243.11 toks/s]
+Processing batched inference:  55%|█████▍    | 36/66 [01:26<01:08,  2.27s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.69 toks/s, output: 42.33 toks/s][A
+Processed prompts:  81%|████████▏ | 26/32 [00:01<00:00, 21.72it/s, est. speed input: 6517.30 toks/s, output: 967.43 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.82it/s, est. speed input: 7776.41 toks/s, output: 1319.08 toks/s]
+Processing batched inference:  56%|█████▌    | 37/66 [01:28<01:06,  2.28s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 303.00 toks/s, output: 42.62 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.18it/s, est. speed input: 7813.64 toks/s, output: 1163.76 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.89it/s, est. speed input: 7819.16 toks/s, output: 1194.62 toks/s]
+Processing batched inference:  58%|█████▊    | 38/66 [01:30<01:04,  2.29s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.47 toks/s, output: 42.30 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.24it/s, est. speed input: 7840.52 toks/s, output: 1161.09 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.97it/s, est. speed input: 7843.67 toks/s, output: 1191.92 toks/s]
+Processing batched inference:  59%|█████▉    | 39/66 [01:33<01:01,  2.30s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.99 toks/s, output: 42.76 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.53it/s, est. speed input: 7042.44 toks/s, output: 1051.84 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.86it/s, est. speed input: 7804.51 toks/s, output: 1276.02 toks/s]
+Processing batched inference:  61%|██████    | 40/66 [01:35<00:59,  2.27s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.07 toks/s, output: 42.24 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.49it/s, est. speed input: 7034.76 toks/s, output: 1043.52 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.86it/s, est. speed input: 7796.88 toks/s, output: 1267.92 toks/s]
+Processing batched inference:  62%|██████▏   | 41/66 [01:37<00:56,  2.27s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 303.81 toks/s, output: 42.07 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.26it/s, est. speed input: 7544.50 toks/s, output: 1115.30 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.18it/s, est. speed input: 7918.57 toks/s, output: 1225.07 toks/s]
+Processing batched inference:  64%|██████▎   | 42/66 [01:39<00:54,  2.26s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.79 toks/s, output: 42.23 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.44it/s, est. speed input: 7306.81 toks/s, output: 1079.77 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.91it/s, est. speed input: 7813.47 toks/s, output: 1236.48 toks/s]
+Processing batched inference:  65%|██████▌   | 43/66 [01:42<00:52,  2.28s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.48 toks/s, output: 42.30 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.63it/s, est. speed input: 6780.56 toks/s, output: 1004.02 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:15<00:00, 22.63it/s, est. speed input: 7547.60 toks/s, output: 1224.61 toks/s][A
+Processed prompts: 100%|██████████| 32/32 [00:26<00:00,  1.07s/it, est. speed input: 479.66 toks/s, output: 231.94 toks/s]  [AProcessed prompts: 100%|██████████| 32/32 [00:26<00:00,  1.22it/s, est. speed input: 479.66 toks/s, output: 231.94 toks/s]
+Processing batched inference:  67%|██████▋   | 44/66 [02:09<03:32,  9.66s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.71 toks/s, output: 42.72 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.36it/s, est. speed input: 7563.55 toks/s, output: 1119.20 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.38it/s, est. speed input: 8000.44 toks/s, output: 1237.64 toks/s]
+Processing batched inference:  68%|██████▊   | 45/66 [02:11<02:35,  7.42s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.56 toks/s, output: 42.84 toks/s][A
+Processed prompts:  78%|███████▊  | 25/32 [00:01<00:00, 20.86it/s, est. speed input: 6256.95 toks/s, output: 931.81 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:16<00:00, 20.86it/s, est. speed input: 7519.91 toks/s, output: 1279.68 toks/s][A
+Processed prompts: 100%|██████████| 32/32 [00:26<00:00,  1.05s/it, est. speed input: 480.33 toks/s, output: 235.86 toks/s]  [AProcessed prompts: 100%|██████████| 32/32 [00:26<00:00,  1.22it/s, est. speed input: 480.33 toks/s, output: 235.86 toks/s]
+Processing batched inference:  70%|██████▉   | 46/66 [02:38<04:25, 13.27s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 304.03 toks/s, output: 42.77 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.38it/s, est. speed input: 7575.60 toks/s, output: 1126.56 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.94it/s, est. speed input: 7835.56 toks/s, output: 1223.24 toks/s]
+Processing batched inference:  71%|███████   | 47/66 [02:40<03:09,  9.95s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 304.24 toks/s, output: 42.80 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.29it/s, est. speed input: 7836.27 toks/s, output: 1160.01 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.27it/s, est. speed input: 7961.10 toks/s, output: 1206.98 toks/s]
+Processing batched inference:  73%|███████▎  | 48/66 [02:42<02:17,  7.62s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 306.07 toks/s, output: 42.38 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.55it/s, est. speed input: 7054.07 toks/s, output: 1045.94 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.91it/s, est. speed input: 7814.36 toks/s, output: 1268.06 toks/s]
+Processing batched inference:  74%|███████▍  | 49/66 [02:44<01:41,  6.00s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.39 toks/s, output: 42.96 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.60it/s, est. speed input: 7342.67 toks/s, output: 1087.91 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.63it/s, est. speed input: 8096.13 toks/s, output: 1279.28 toks/s]
+Processing batched inference:  76%|███████▌  | 50/66 [02:47<01:18,  4.88s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.76 toks/s, output: 42.34 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.54it/s, est. speed input: 7050.10 toks/s, output: 1044.80 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.91it/s, est. speed input: 7815.84 toks/s, output: 1274.64 toks/s]
+Processing batched inference:  77%|███████▋  | 51/66 [02:49<01:01,  4.09s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.79 toks/s, output: 42.73 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.37it/s, est. speed input: 7575.37 toks/s, output: 1127.43 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.39it/s, est. speed input: 8012.70 toks/s, output: 1245.90 toks/s]
+Processing batched inference:  79%|███████▉  | 52/66 [02:51<00:49,  3.52s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 304.14 toks/s, output: 42.78 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.52it/s, est. speed input: 7315.29 toks/s, output: 1083.31 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.94it/s, est. speed input: 7830.71 toks/s, output: 1248.30 toks/s]
+Processing batched inference:  80%|████████  | 53/66 [02:53<00:40,  3.13s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.27s/it, est. speed input: 306.09 toks/s, output: 42.38 toks/s][A
+Processed prompts:  97%|█████████▋| 31/32 [00:01<00:00, 26.31it/s, est. speed input: 7853.27 toks/s, output: 1158.58 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.65it/s, est. speed input: 8104.13 toks/s, output: 1222.35 toks/s]
+Processing batched inference:  82%|████████▏ | 54/66 [02:55<00:34,  2.85s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.24 toks/s, output: 42.26 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.35it/s, est. speed input: 7576.95 toks/s, output: 1122.38 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.57it/s, est. speed input: 8074.95 toks/s, output: 1249.17 toks/s]
+Processing batched inference:  83%|████████▎ | 55/66 [02:58<00:29,  2.64s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 303.19 toks/s, output: 43.31 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.67it/s, est. speed input: 6778.11 toks/s, output: 1011.82 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.83it/s, est. speed input: 7790.55 toks/s, output: 1303.06 toks/s]
+Processing batched inference:  85%|████████▍ | 56/66 [03:00<00:25,  2.54s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 301.55 toks/s, output: 41.75 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.13it/s, est. speed input: 7499.20 toks/s, output: 1105.89 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.76it/s, est. speed input: 7753.98 toks/s, output: 1199.28 toks/s]
+Processing batched inference:  86%|████████▋ | 57/66 [03:02<00:22,  2.46s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.24 toks/s, output: 42.65 toks/s][A
+Processed prompts:  94%|█████████▍| 30/32 [00:01<00:00, 25.36it/s, est. speed input: 7558.33 toks/s, output: 1116.79 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.91it/s, est. speed input: 7814.49 toks/s, output: 1210.74 toks/s]
+Processing batched inference:  88%|████████▊ | 58/66 [03:05<00:19,  2.42s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.29s/it, est. speed input: 303.61 toks/s, output: 42.71 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.46it/s, est. speed input: 7298.69 toks/s, output: 1079.10 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.89it/s, est. speed input: 7806.11 toks/s, output: 1236.98 toks/s]
+Processing batched inference:  89%|████████▉ | 59/66 [03:07<00:16,  2.38s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.22 toks/s, output: 42.12 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.55it/s, est. speed input: 6755.74 toks/s, output: 1001.43 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.79it/s, est. speed input: 7765.27 toks/s, output: 1287.61 toks/s]
+Processing batched inference:  91%|█████████ | 60/66 [03:09<00:14,  2.34s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 302.89 toks/s, output: 42.60 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.47it/s, est. speed input: 7018.22 toks/s, output: 1044.33 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.80it/s, est. speed input: 7781.27 toks/s, output: 1271.81 toks/s]
+Processing batched inference:  92%|█████████▏| 61/66 [03:12<00:11,  2.40s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:40,  1.29s/it, est. speed input: 302.14 toks/s, output: 42.50 toks/s][A
+Processed prompts:  88%|████████▊ | 28/32 [00:01<00:00, 23.40it/s, est. speed input: 6997.07 toks/s, output: 1040.74 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.74it/s, est. speed input: 7755.74 toks/s, output: 1267.83 toks/s]
+Processing batched inference:  94%|█████████▍| 62/66 [03:14<00:09,  2.37s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 305.74 toks/s, output: 42.22 toks/s][A
+Processed prompts:  91%|█████████ | 29/32 [00:01<00:00, 24.39it/s, est. speed input: 7298.62 toks/s, output: 1082.38 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.19it/s, est. speed input: 7924.85 toks/s, output: 1256.66 toks/s]
+Processing batched inference:  95%|█████████▌| 63/66 [03:16<00:07,  2.34s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 303.56 toks/s, output: 42.03 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.50it/s, est. speed input: 6746.80 toks/s, output: 1005.52 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 20.04it/s, est. speed input: 7866.04 toks/s, output: 1303.79 toks/s]
+Processing batched inference:  97%|█████████▋| 64/66 [03:18<00:04,  2.30s/it]
+Processed prompts:   0%|          | 0/32 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   3%|▎         | 1/32 [00:01<00:39,  1.28s/it, est. speed input: 304.16 toks/s, output: 42.11 toks/s][A
+Processed prompts:  84%|████████▍ | 27/32 [00:01<00:00, 22.52it/s, est. speed input: 6751.90 toks/s, output: 1002.49 toks/s][AProcessed prompts: 100%|██████████| 32/32 [00:01<00:00, 19.76it/s, est. speed input: 7755.25 toks/s, output: 1286.87 toks/s]
+Processing batched inference:  98%|█████████▊| 65/66 [03:21<00:02,  2.27s/it]
+Processed prompts:   0%|          | 0/28 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s][A
+Processed prompts:   4%|▎         | 1/28 [00:01<00:31,  1.16s/it, est. speed input: 336.91 toks/s, output: 47.39 toks/s][A
+Processed prompts:  89%|████████▉ | 25/28 [00:01<00:00, 22.76it/s, est. speed input: 6849.19 toks/s, output: 1021.19 toks/s][AProcessed prompts: 100%|██████████| 28/28 [00:01<00:00, 18.87it/s, est. speed input: 7410.63 toks/s, output: 1194.99 toks/s]
+Processing batched inference: 100%|██████████| 66/66 [03:23<00:00,  2.22s/it]Processing batched inference: 100%|██████████| 66/66 [03:23<00:00,  3.08s/it]
+**********************************************************************
+2108 total generated results have been saved at ./evaluate_outputs/train_results/vinder_adkg_test/vindr_sft_base/qwen2_vl-3b/checkpoint-126/generated_predictions.jsonl.
+**********************************************************************
+[rank0]:[W701 18:18:42.827384570 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+Running inference on checkpoint: checkpoint-189
+INFO 07-01 18:18:56 [__init__.py:239] Automatically detected platform cuda.
+[INFO|training_args.py:2135] 2025-07-01 18:18:58,432 >> PyTorch: setting up devices
+[INFO|training_args.py:1812] 2025-07-01 18:18:58,480 >> The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,499 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,499 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,499 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,499 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,499 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,499 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,499 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:18:58,892 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|image_processing_base.py:378] 2025-07-01 18:18:58,895 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/preprocessor_config.json
+[INFO|image_processing_base.py:378] 2025-07-01 18:18:58,899 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-01 18:18:58,906 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,907 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,907 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,907 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,907 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,907 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,907 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:18:58,907 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:18:59,291 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:627] 2025-07-01 18:18:59,293 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/video_preprocessor_config.json
+[INFO|video_processing_utils.py:683] 2025-07-01 18:18:59,495 >> Video processor Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:990] 2025-07-01 18:18:59,950 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[INFO|configuration_utils.py:696] 2025-07-01 18:19:00,003 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/config.json
+[INFO|configuration_utils.py:696] 2025-07-01 18:19:00,003 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/config.json
+[INFO|configuration_utils.py:770] 2025-07-01 18:19:00,005 >> Model config Qwen2VLConfig {
+  "architectures": [
+    "Qwen2VLForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "hidden_act": "silu",
+  "hidden_size": 1536,
+  "image_token_id": 151655,
+  "initializer_range": 0.02,
+  "intermediate_size": 8960,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen2_vl",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "mrope_section": [
+      16,
+      24,
+      24
+    ],
+    "rope_type": "default",
+    "type": "default"
+  },
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "text_config": {
+    "architectures": [
+      "Qwen2VLForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 1536,
+    "image_token_id": null,
+    "initializer_range": 0.02,
+    "intermediate_size": 8960,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_vl_text",
+    "num_attention_heads": 12,
+    "num_hidden_layers": 28,
+    "num_key_value_heads": 2,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        24,
+        24
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "sliding_window": 32768,
+    "tie_word_embeddings": true,
+    "torch_dtype": "float32",
+    "use_cache": false,
+    "use_sliding_window": false,
+    "video_token_id": null,
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vision_token_id": 151654,
+    "vocab_size": 151936
+  },
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.52.4",
+  "use_cache": false,
+  "use_sliding_window": false,
+  "video_token_id": 151656,
+  "vision_config": {
+    "depth": 32,
+    "embed_dim": 1280,
+    "hidden_act": "quick_gelu",
+    "hidden_size": 1536,
+    "in_channels": 3,
+    "in_chans": 3,
+    "initializer_range": 0.02,
+    "mlp_ratio": 4,
+    "model_type": "qwen2_vl",
+    "num_heads": 16,
+    "patch_size": 14,
+    "spatial_merge_size": 2,
+    "spatial_patch_size": 14,
+    "temporal_patch_size": 2,
+    "torch_dtype": "float32"
+  },
+  "vision_end_token_id": 151653,
+  "vision_start_token_id": 151652,
+  "vision_token_id": 151654,
+  "vocab_size": 151936
+}
+
+INFO 07-01 18:19:12 [config.py:689] This model supports multiple tasks: {'classify', 'generate', 'reward', 'score', 'embed'}. Defaulting to 'generate'.
+INFO 07-01 18:19:12 [llm_engine.py:243] Initializing a V0 LLM engine (v0.8.4) with config: model='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189', speculative_config=None, tokenizer='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=6144, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":[],"compile_sizes":[],"cudagraph_capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":256}, use_cached_outputs=False, 
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:12,188 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:12,188 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:12,188 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:12,188 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:12,188 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:12,188 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:12,188 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:19:12,525 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:1088] 2025-07-01 18:19:12,628 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/generation_config.json
+[INFO|configuration_utils.py:1135] 2025-07-01 18:19:12,632 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.01,
+  "top_k": 1,
+  "top_p": 0.001
+}
+
+INFO 07-01 18:19:14 [cuda.py:292] Using Flash Attention backend.
+INFO 07-01 18:19:14 [parallel_state.py:959] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0
+INFO 07-01 18:19:14 [model_runner.py:1110] Starting to load model saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189...
+WARNING 07-01 18:19:14 [vision.py:93] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 07-01 18:19:14 [config.py:3466] cudagraph sizes specified by model runner [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256] is overridden by config [256, 128, 2, 1, 4, 136, 8, 144, 16, 152, 24, 160, 32, 168, 40, 176, 48, 184, 56, 192, 64, 200, 72, 208, 80, 216, 88, 120, 224, 96, 232, 104, 240, 112, 248]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.56s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:02<00:00,  2.56s/it]
+
+INFO 07-01 18:19:17 [loader.py:458] Loading weights took 2.80 seconds
+INFO 07-01 18:19:17 [model_runner.py:1146] Model loading took 4.1513 GiB and 3.033860 seconds
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,133 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,134 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,134 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,134 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,134 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,134 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,134 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:19:18,562 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|image_processing_base.py:378] 2025-07-01 18:19:18,661 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-01 18:19:18,663 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|image_processing_base.py:378] 2025-07-01 18:19:18,663 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-01 18:19:18,664 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,664 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,664 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,664 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,664 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,664 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,665 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-01 18:19:18,665 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-01 18:19:19,458 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:627] 2025-07-01 18:19:19,458 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189/video_preprocessor_config.json
+[INFO|video_processing_utils.py:683] 2025-07-01 18:19:19,459 >> Video processor Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:990] 2025-07-01 18:19:19,940 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: CachedQwen2TokenizerFast(name_or_path='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-189', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='left', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[WARNING|image_utils.py:939] 2025-07-01 18:19:20,727 >> Unused or unrecognized kwargs: return_tensors.
+WARNING 07-01 18:19:21 [model_runner.py:1311] Computed max_num_seqs (min(256, 6144 // 98304)) to be less than 1. Setting it to the minimum value of 1.
+[WARNING|image_utils.py:939] 2025-07-01 18:19:23,885 >> Unused or unrecognized kwargs: return_tensors.
+[WARNING|tokenization_utils_base.py:3934] 2025-07-01 18:19:24,969 >> Token indices sequence length is longer than the specified maximum sequence length for this model (98304 > 32768). Running this sequence through the model will result in indexing errors
+WARNING 07-01 18:19:25 [profiling.py:245] The sequence length used for profiling (max_num_batched_tokens / max_num_seqs = 6144) is too short to hold the multi-modal embeddings in the worst case (98304 tokens in total, out of which {'image': 65536, 'video': 32768} are reserved for multi-modal embeddings). This may cause certain multi-modal inputs to fail during inference, even when the input text is short. To avoid this, you should increase `max_model_len`, reduce `max_num_seqs`, and/or reduce `mm_counts`.
