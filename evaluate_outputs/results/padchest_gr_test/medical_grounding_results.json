@@ -1,6 +1,6 @@
 {
   "evaluation_metadata": {
-    "timestamp": "2025-06-30T15:55:17.991510",
+    "timestamp": "2025-07-02T09:07:27.891789",
     "results_folder": "/u/home/lj0/Code/LLaMA-Factory-Latest/evaluate_outputs/results/padchest_gr_test",
     "original_data_path": "/u/home/lj0/Code/LLaMA-Factory-Latest/data/0_my_dataset/padchest_gt/padchest_input_data_qwen2_test_len_1285.json",
     "total_models_processed": 4,
