@@ -912,4 +912,4 @@ wandb: 🚀 View run at https://wandb.ai/compai/llamafactory/runs/9eewk6ad
 `loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
 `loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
 `loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
-  0%|          | 1/945 [00:34<9:08:52, 34.89s/it]
+  0%|          | 1/945 [00:34<9:08:52, 34.89s/it]  0%|          | 2/945 [01:04<8:16:53, 31.62s/it]
