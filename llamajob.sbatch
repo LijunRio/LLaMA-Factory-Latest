@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --partition=mcml-dgx-a100-40x8
+#SBATCH --partition=mcml-hgx-a100-80x4
 #SBATCH --qos=mcml
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:4
