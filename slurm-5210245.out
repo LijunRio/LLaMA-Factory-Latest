@@ -1,0 +1,117 @@
+Container llamafactory already exists.
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 24.07 (build 100464919)
+PyTorch Version 2.4.0a0+3bcc3cd
+Container image Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+ERROR: This container was built for NVIDIA Driver Release 555.42 or later, but
+       version 535.247.01 was detected and compatibility mode is UNAVAILABLE.
+
+       [[]]
+
+NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
+      detected.  Multi-node communication performance may be reduced.
+
+Sat Jul  5 09:45:36 2025       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.247.01             Driver Version: 535.247.01   CUDA Version: 12.5     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  | 00000000:87:00.0 Off |                    0 |
+| N/A   38C    P0              59W / 400W |      0MiB / 40960MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Checkpoint directory: saves/qwen2_vl-3b/vindr_sft_def
+Output directory: ./evaluate_outputs/new_results/vindr_sft_def_qwen2_vl-3b
+Processing model: qwen2_vl-3b
+Running inference on checkpoint: checkpoint-1008
+INFO 07-05 09:46:06 [__init__.py:239] Automatically detected platform cuda.
+[INFO|training_args.py:2135] 2025-07-05 09:46:10,379 >> PyTorch: setting up devices
+[INFO|training_args.py:1812] 2025-07-05 09:46:10,435 >> The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,474 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,474 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,474 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,474 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,474 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,474 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,474 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-05 09:46:10,864 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|image_processing_base.py:378] 2025-07-05 09:46:10,866 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_def/checkpoint-1008/preprocessor_config.json
+[INFO|image_processing_base.py:378] 2025-07-05 09:46:10,873 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_def/checkpoint-1008/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-05 09:46:10,882 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,882 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,882 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,882 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,883 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,883 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,883 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:46:10,883 >> loading file chat_template.jinja
