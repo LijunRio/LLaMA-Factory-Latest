@@ -913,4 +913,178 @@ wandb: 🚀 View run at https://wandb.ai/compai/llamafactory/runs/9eewk6ad
 `loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
 `loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
   0%|          | 1/945 [00:34<9:08:52, 34.89s/it]  0%|          | 2/945 [01:04<8:16:53, 31.62s/it]  0%|          | 3/945 [01:33<7:58:20, 30.47s/it]  0%|          | 4/945 [02:03<7:53:23, 30.18s/it]  1%|          | 5/945 [02:33<7:52:58, 30.19s/it]                                                 {'loss': 0.8336, 'grad_norm': 18.646994619315393, 'learning_rate': 1.2631578947368422e-06, 'epoch': 0.08}
-  1%|          | 5/945 [02:33<7:52:58, 30.19s/it]  1%|          | 6/945 [03:02<7:48:07, 29.91s/it]
+  1%|          | 5/945 [02:33<7:52:58, 30.19s/it]  1%|          | 6/945 [03:02<7:48:07, 29.91s/it]  1%|          | 7/945 [03:31<7:43:54, 29.67s/it]  1%|          | 8/945 [04:00<7:37:12, 29.28s/it]  1%|          | 9/945 [04:31<7:48:44, 30.05s/it]  1%|          | 10/945 [05:00<7:41:36, 29.62s/it]                                                  {'loss': 0.558, 'grad_norm': 4.690296092051348, 'learning_rate': 2.842105263157895e-06, 'epoch': 0.16}
+  1%|          | 10/945 [05:00<7:41:36, 29.62s/it]  1%|          | 11/945 [05:30<7:40:06, 29.56s/it]  1%|▏         | 12/945 [05:59<7:41:09, 29.66s/it]  1%|▏         | 13/945 [06:29<7:41:04, 29.68s/it]  1%|▏         | 14/945 [06:59<7:39:33, 29.62s/it]  2%|▏         | 15/945 [07:28<7:35:36, 29.39s/it]                                                  {'loss': 0.4303, 'grad_norm': 1.4791475357308503, 'learning_rate': 4.421052631578947e-06, 'epoch': 0.24}
+  2%|▏         | 15/945 [07:28<7:35:36, 29.39s/it]  2%|▏         | 16/945 [07:56<7:31:33, 29.16s/it]  2%|▏         | 17/945 [08:28<7:42:47, 29.92s/it]  2%|▏         | 18/945 [08:57<7:38:53, 29.70s/it]  2%|▏         | 19/945 [09:28<7:42:23, 29.96s/it]  2%|▏         | 20/945 [09:58<7:42:05, 29.97s/it]                                                  {'loss': 0.4025, 'grad_norm': 3.3609247648072995, 'learning_rate': 6e-06, 'epoch': 0.32}
+  2%|▏         | 20/945 [09:58<7:42:05, 29.97s/it]  2%|▏         | 21/945 [10:26<7:35:04, 29.55s/it]  2%|▏         | 22/945 [10:57<7:39:03, 29.84s/it]  2%|▏         | 23/945 [11:26<7:34:56, 29.61s/it]  3%|▎         | 24/945 [11:55<7:33:15, 29.53s/it]  3%|▎         | 25/945 [12:24<7:31:59, 29.48s/it]                                                  {'loss': 0.3582, 'grad_norm': 1.491034432342728, 'learning_rate': 7.578947368421053e-06, 'epoch': 0.4}
+  3%|▎         | 25/945 [12:24<7:31:59, 29.48s/it]  3%|▎         | 26/945 [12:55<7:35:01, 29.71s/it]  3%|▎         | 27/945 [13:24<7:32:12, 29.56s/it]  3%|▎         | 28/945 [13:53<7:31:51, 29.57s/it]  3%|▎         | 29/945 [14:24<7:34:55, 29.80s/it]  3%|▎         | 30/945 [14:54<7:34:40, 29.82s/it]                                                  {'loss': 0.333, 'grad_norm': 1.2104007528957086, 'learning_rate': 9.157894736842105e-06, 'epoch': 0.48}
+  3%|▎         | 30/945 [14:54<7:34:40, 29.82s/it]  3%|▎         | 31/945 [15:23<7:33:41, 29.78s/it]  3%|▎         | 32/945 [15:53<7:33:30, 29.80s/it]  3%|▎         | 33/945 [16:24<7:37:47, 30.12s/it]  4%|▎         | 34/945 [16:53<7:32:54, 29.83s/it]  4%|▎         | 35/945 [17:24<7:38:48, 30.25s/it]                                                  {'loss': 0.3262, 'grad_norm': 0.9892153061598643, 'learning_rate': 1.0736842105263158e-05, 'epoch': 0.56}
+  4%|▎         | 35/945 [17:24<7:38:48, 30.25s/it]  4%|▍         | 36/945 [17:53<7:31:43, 29.82s/it]  4%|▍         | 37/945 [18:23<7:29:16, 29.69s/it]  4%|▍         | 38/945 [18:52<7:25:03, 29.44s/it]  4%|▍         | 39/945 [19:22<7:28:18, 29.69s/it]  4%|▍         | 40/945 [19:51<7:27:35, 29.67s/it]                                                  {'loss': 0.3143, 'grad_norm': 1.0843071187557063, 'learning_rate': 1.231578947368421e-05, 'epoch': 0.64}
+  4%|▍         | 40/945 [19:51<7:27:35, 29.67s/it]  4%|▍         | 41/945 [20:20<7:21:30, 29.30s/it]  4%|▍         | 42/945 [20:48<7:16:05, 28.98s/it]  5%|▍         | 43/945 [21:18<7:18:29, 29.17s/it]  5%|▍         | 44/945 [21:46<7:15:38, 29.01s/it]  5%|▍         | 45/945 [22:16<7:17:21, 29.16s/it]                                                  {'loss': 0.3104, 'grad_norm': 0.76227210969488, 'learning_rate': 1.3894736842105263e-05, 'epoch': 0.72}
+  5%|▍         | 45/945 [22:16<7:17:21, 29.16s/it]  5%|▍         | 46/945 [22:47<7:25:15, 29.72s/it]  5%|▍         | 47/945 [23:16<7:21:29, 29.50s/it]  5%|▌         | 48/945 [23:45<7:21:25, 29.53s/it]  5%|▌         | 49/945 [24:14<7:17:12, 29.28s/it]  5%|▌         | 50/945 [24:43<7:13:27, 29.06s/it]                                                  {'loss': 0.3025, 'grad_norm': 0.8747378032104798, 'learning_rate': 1.547368421052632e-05, 'epoch': 0.8}
+  5%|▌         | 50/945 [24:43<7:13:27, 29.06s/it]  5%|▌         | 51/945 [25:12<7:13:36, 29.10s/it]  6%|▌         | 52/945 [25:41<7:13:50, 29.15s/it]  6%|▌         | 53/945 [26:10<7:13:30, 29.16s/it]  6%|▌         | 54/945 [26:39<7:11:02, 29.03s/it]  6%|▌         | 55/945 [27:09<7:15:32, 29.36s/it]                                                  {'loss': 0.3023, 'grad_norm': 1.0273900319561498, 'learning_rate': 1.705263157894737e-05, 'epoch': 0.87}
+  6%|▌         | 55/945 [27:09<7:15:32, 29.36s/it]  6%|▌         | 56/945 [27:38<7:10:59, 29.09s/it]  6%|▌         | 57/945 [28:07<7:12:22, 29.21s/it]  6%|▌         | 58/945 [28:36<7:11:08, 29.16s/it]  6%|▌         | 59/945 [29:06<7:14:47, 29.44s/it]  6%|▋         | 60/945 [29:36<7:13:25, 29.38s/it]                                                  {'loss': 0.3, 'grad_norm': 1.3290002473812428, 'learning_rate': 1.8631578947368424e-05, 'epoch': 0.95}
+  6%|▋         | 60/945 [29:36<7:13:25, 29.38s/it]  6%|▋         | 61/945 [30:06<7:17:16, 29.68s/it]  7%|▋         | 62/945 [30:35<7:12:46, 29.41s/it]  7%|▋         | 63/945 [31:01<7:00:26, 28.60s/it][INFO|trainer.py:3993] 2025-07-05 13:41:06,525 >> Saving model checkpoint to saves/qwen2_vl-7b/vindr_sft_base/checkpoint-63
+[INFO|configuration_utils.py:424] 2025-07-05 13:41:06,531 >> Configuration saved in saves/qwen2_vl-7b/vindr_sft_base/checkpoint-63/config.json
+[INFO|configuration_utils.py:904] 2025-07-05 13:41:06,541 >> Configuration saved in saves/qwen2_vl-7b/vindr_sft_base/checkpoint-63/generation_config.json
+Traceback (most recent call last):
+  File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 23, in <module>
+    launch()
+  File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 19, in launch
+    run_exp()
+  File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 110, in run_exp
+    _training_function(config={"args": args, "callbacks": callbacks})
+  File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 72, in _training_function
+    run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+  File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/sft/workflow.py", line 96, in run_sft
+    train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 2240, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 2622, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 3102, in _maybe_log_save_evaluate
+    self._save_checkpoint(model, trial)
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 3199, in _save_checkpoint
+    self.save_model(output_dir, _internal_call=True)
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 3898, in save_model
+    self._save(output_dir, state_dict=state_dict)
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 4015, in _save
+    self.model.save_pretrained(
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/modeling_utils.py", line 3717, in save_pretrained
+    safe_save_file(shard, os.path.join(save_directory, shard_file), metadata={"format": "pt"})
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/safetensors/torch.py", line 286, in save_file
+    serialize_file(_flatten(tensors), filename, metadata=metadata)
+safetensors_rust.SafetensorError: Error while serializing: IoError(Os { code: 122, kind: QuotaExceeded, message: "Disk quota exceeded" })
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 23, in <module>
+[rank0]:     launch()
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py", line 19, in launch
+[rank0]:     run_exp()
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 110, in run_exp
+[rank0]:     _training_function(config={"args": args, "callbacks": callbacks})
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/tuner.py", line 72, in _training_function
+[rank0]:     run_sft(model_args, data_args, training_args, finetuning_args, generating_args, callbacks)
+[rank0]:   File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/train/sft/workflow.py", line 96, in run_sft
+[rank0]:     train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 2240, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 2622, in _inner_training_loop
+[rank0]:     self._maybe_log_save_evaluate(
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 3102, in _maybe_log_save_evaluate
+[rank0]:     self._save_checkpoint(model, trial)
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 3199, in _save_checkpoint
+[rank0]:     self.save_model(output_dir, _internal_call=True)
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 3898, in save_model
+[rank0]:     self._save(output_dir, state_dict=state_dict)
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/trainer.py", line 4015, in _save
+[rank0]:     self.model.save_pretrained(
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/transformers/modeling_utils.py", line 3717, in save_pretrained
+[rank0]:     safe_save_file(shard, os.path.join(save_directory, shard_file), metadata={"format": "pt"})
+[rank0]:   File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/safetensors/torch.py", line 286, in save_file
+[rank0]:     serialize_file(_flatten(tensors), filename, metadata=metadata)
+[rank0]: safetensors_rust.SafetensorError: Error while serializing: IoError(Os { code: 122, kind: QuotaExceeded, message: "Disk quota exceeded" })
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33msaves/qwen2_vl-7b/vindr_sft_base[0m at: [34mhttps://wandb.ai/compai/llamafactory/runs/9eewk6ad[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250705_130954-9eewk6ad/logs[0m
+W0705 13:41:15.556000 4004074 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 4004140 closing signal SIGTERM
+W0705 13:41:15.558000 4004074 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 4004141 closing signal SIGTERM
+W0705 13:41:15.559000 4004074 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 4004142 closing signal SIGTERM
+E0705 13:41:16.678000 4004074 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 4004139) of binary: /root/miniconda3/envs/llamafactory/bin/python
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/llamafactory/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-07-05_13:41:15
+  host      : mcml-hgx-a100-009
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4004139)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/llamafactory/bin/llamafactory-cli", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/cli.py", line 130, in main
+    process = subprocess.run(
+              ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llamafactory/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['torchrun', '--nnodes', '1', '--node_rank', '0', '--nproc_per_node', '4', '--master_addr', '127.0.0.1', '--master_port', '42717', '/home/june/Code/LLaMA-Factory-Latest/src/llamafactory/launcher.py', 'examples/train_full/qwen2_vl_sft_7b_modified_base.yaml']' returned non-zero exit status 1.
+### model
+model_name_or_path: /home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-7B-Instruct/
+image_max_pixels: 12845056
+image_min_pixels: 3136
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+# freeze_vision_tower: true
+# freeze_multi_modal_projector: true
+# freeze_language_model: false
+freeze_vision_tower: false
+freeze_multi_modal_projector: false
+freeze_language_model: false
+deepspeed: examples/deepspeed/ds_z3_config.json
+
+### dataset
+dataset: vinder_train_base
+template: qwen2_vl
+cutoff_len: 1024
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: saves/qwen2_vl-7b/vindr_sft_base
+logging_steps: 5
+save_steps: 63
+plot_loss: true
+overwrite_output_dir: saves/qwen2_vl-7b/vindr_sft_base
+save_only_model: false
+report_to: wandb  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+
+### train
+per_device_train_batch_size: 8
+gradient_accumulation_steps: 8
+learning_rate: 3.0e-5
+num_train_epochs: 15.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+
+### eval
+# val_size: 0.1
+# per_device_eval_batch_size: 1
+# eval_strategy: steps
+# eval_steps: 500
