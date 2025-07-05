@@ -1,4 +1,18 @@
 {
+  "def_padchest_test": {
+    "file_name": "./0_my_dataset/padchest_gt/def_padchest_input_data_qwen2_test_len_1285.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "vinder_adkg_def_test": {
     "file_name": "./0_my_dataset/vindr/qwen2_vindr_input_definition_test_len_2108.json",
     "formatting": "sharegpt",
