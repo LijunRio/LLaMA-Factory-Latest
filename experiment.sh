@@ -3,7 +3,7 @@
 # 原始配置文件
 CONFIG_FILE="examples/train_full/qwen2_5vl_full_sft.yaml"
 # 用于保存修改后的副本
-MODIFIED_CONFIG_FILE="examples/train_full/qwen2_vl_sft_2b_modified_def.yaml"
+MODIFIED_CONFIG_FILE="examples/train_full/qwen2_vl_sft_2b_modified_base.yaml"
 
 # 运行实验的通用函数
 run_experiment () {
@@ -64,6 +64,19 @@ run_experiment () {
 # LOGGING_STEPS=5
 # run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT Base"
 
+### 🚀 Experiment 1
+MODEL_NAME="/home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-2B-Instruct/"
+OUTPUT_DIR="saves/qwen2_vl-2b/vindr_sft_base"
+TRAIN_DATASET="vinder_train_base"
+CUTOFF_LENGTH=1024
+SAVE_STEPS=63
+LEARNING_RATE=3.0e-5
+NUM_TRAIN_EPOCHS=15.0
+PER_DEVICE_TRAIN_BATCH_SIZE=8
+GRADIENT_ACCUMULATION_STEPS=8
+LOGGING_STEPS=5
+run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT Base"
+
 # # ### 🚀 Experiment 2
 # MODEL_NAME="/home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-7B-Instruct"
 # OUTPUT_DIR="saves/qwen2_vl-7b/vindr_sft_def"
@@ -78,16 +91,16 @@ run_experiment () {
 # run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT Base"
 
 
-# ### 🚀 Experiment 2
-MODEL_NAME="/home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-2B-Instruct"
-OUTPUT_DIR="saves/qwen2_vl-2b/vindr_sft_def"
-TRAIN_DATASET="vinder_train_def"
-CUTOFF_LENGTH=1024
-SAVE_STEPS=63
-LEARNING_RATE=3.0e-5
-NUM_TRAIN_EPOCHS=15.0
-PER_DEVICE_TRAIN_BATCH_SIZE=8
-GRADIENT_ACCUMULATION_STEPS=8
-LOGGING_STEPS=5
-run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT Base"
+# # ### 🚀 Experiment 2
+# MODEL_NAME="/home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-2B-Instruct"
+# OUTPUT_DIR="saves/qwen2_vl-2b/vindr_sft_def"
+# TRAIN_DATASET="vinder_train_def"
+# CUTOFF_LENGTH=1024
+# SAVE_STEPS=63
+# LEARNING_RATE=3.0e-5
+# NUM_TRAIN_EPOCHS=15.0
+# PER_DEVICE_TRAIN_BATCH_SIZE=8
+# GRADIENT_ACCUMULATION_STEPS=8
+# LOGGING_STEPS=5
+# run_experiment "Experiment 1:Qwen2-VL-2B-Instruct SFT Base"
 
