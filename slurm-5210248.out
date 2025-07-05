@@ -475,3 +475,346 @@ INFO 07-05 09:47:15 [llm_engine.py:243] Initializing a V0 LLM engine (v0.8.4) wi
   "top_p": 0.001
 }
 
+INFO 07-05 09:47:17 [cuda.py:292] Using Flash Attention backend.
+INFO 07-05 09:47:17 [parallel_state.py:959] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0
+INFO 07-05 09:47:17 [model_runner.py:1110] Starting to load model saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008...
+WARNING 07-05 09:47:17 [vision.py:93] Current `vllm-flash-attn` has a bug inside vision module, so we use xformers backend instead. You can run `pip install flash-attn` to use flash-attention backend.
+INFO 07-05 09:47:17 [config.py:3466] cudagraph sizes specified by model runner [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256] is overridden by config [256, 128, 2, 1, 4, 136, 8, 144, 16, 152, 24, 160, 32, 168, 40, 176, 48, 184, 56, 192, 64, 200, 72, 208, 80, 216, 88, 120, 224, 96, 232, 104, 240, 112, 248]
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:07<00:00,  7.23s/it]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:07<00:00,  7.23s/it]
+
+INFO 07-05 09:47:25 [loader.py:458] Loading weights took 7.46 seconds
+INFO 07-05 09:47:25 [model_runner.py:1146] Model loading took 4.1513 GiB and 7.705348 seconds
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:25,650 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:25,650 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:25,650 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:25,650 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:25,650 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:25,650 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:25,651 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-05 09:47:26,067 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|image_processing_base.py:378] 2025-07-05 09:47:26,165 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-05 09:47:26,165 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|image_processing_base.py:378] 2025-07-05 09:47:26,165 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-05 09:47:26,166 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:26,166 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:26,166 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:26,166 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:26,166 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:26,166 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:26,166 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:26,166 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-05 09:47:26,923 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:627] 2025-07-05 09:47:26,923 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/video_preprocessor_config.json
+[INFO|video_processing_utils.py:683] 2025-07-05 09:47:26,923 >> Video processor Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:990] 2025-07-05 09:47:27,384 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: CachedQwen2TokenizerFast(name_or_path='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='left', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[WARNING|image_utils.py:939] 2025-07-05 09:47:28,051 >> Unused or unrecognized kwargs: return_tensors.
+WARNING 07-05 09:47:28 [model_runner.py:1311] Computed max_num_seqs (min(256, 6144 // 98304)) to be less than 1. Setting it to the minimum value of 1.
+[WARNING|image_utils.py:939] 2025-07-05 09:47:30,808 >> Unused or unrecognized kwargs: return_tensors.
+[WARNING|tokenization_utils_base.py:3934] 2025-07-05 09:47:31,787 >> Token indices sequence length is longer than the specified maximum sequence length for this model (98304 > 32768). Running this sequence through the model will result in indexing errors
+WARNING 07-05 09:47:32 [profiling.py:245] The sequence length used for profiling (max_num_batched_tokens / max_num_seqs = 6144) is too short to hold the multi-modal embeddings in the worst case (98304 tokens in total, out of which {'image': 65536, 'video': 32768} are reserved for multi-modal embeddings). This may cause certain multi-modal inputs to fail during inference, even when the input text is short. To avoid this, you should increase `max_model_len`, reduce `max_num_seqs`, and/or reduce `mm_counts`.
