@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --partition=mcml-hgx-a100-80x4
+#SBATCH --partition=mcml-dgx-a100-40x8
 #SBATCH --qos=mcml
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:4
 #SBATCH --time=10:00:00
-#SBATCH --job-name=qwen2_sft_def
+#SBATCH --job-name=2b_sft_def
 
 if ! enroot list | grep -q "llamafactory"; then
     echo "Container llamafactory not found. Creating container..."
