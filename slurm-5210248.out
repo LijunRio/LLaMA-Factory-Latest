@@ -34,3 +34,444 @@ ERROR: This container was built for NVIDIA Driver Release 555.42 or later, but
 NOTE: Mellanox network driver detected, but NVIDIA peer memory driver not
       detected.  Multi-node communication performance may be reduced.
 
+Sat Jul  5 09:46:51 2025       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.247.01             Driver Version: 535.247.01   CUDA Version: 12.5     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  | 00000000:90:00.0 Off |                    0 |
+| N/A   37C    P0              65W / 400W |      0MiB / 40960MiB |      0%      Default |
+|                                         |                      |             Disabled |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Checkpoint directory: saves/qwen2_vl-3b/vindr_sft_base
+Output directory: ./evaluate_outputs/new_results/vindr_sft_base_qwen2_vl-3b
+Processing model: qwen2_vl-3b
+Running inference on checkpoint: checkpoint-1008
+INFO 07-05 09:47:00 [__init__.py:239] Automatically detected platform cuda.
+[INFO|training_args.py:2135] 2025-07-05 09:47:02,027 >> PyTorch: setting up devices
+[INFO|training_args.py:1812] 2025-07-05 09:47:02,076 >> The default value for the training argument `--report_to` will change in v5 (from all installed integrations to none). In v5, you will need to use `--report_to all` to get the same behavior as now. You should start updating your code and make this info disappear :-).
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,100 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,100 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,100 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,100 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,100 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,100 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,100 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-05 09:47:02,495 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|image_processing_base.py:378] 2025-07-05 09:47:02,497 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/preprocessor_config.json
+[INFO|image_processing_base.py:378] 2025-07-05 09:47:02,503 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/preprocessor_config.json
+[INFO|image_processing_base.py:433] 2025-07-05 09:47:02,509 >> Image processor Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,510 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,510 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,510 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,510 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,510 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,510 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:02,510 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-05 09:47:02,878 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|video_processing_utils.py:627] 2025-07-05 09:47:02,881 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/video_preprocessor_config.json
+[INFO|video_processing_utils.py:683] 2025-07-05 09:47:03,094 >> Video processor Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:990] 2025-07-05 09:47:03,532 >> Processor Qwen2VLProcessor:
+- image_processor: Qwen2VLImageProcessorFast {
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessorFast",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_tensors": null,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: Qwen2TokenizerFast(name_or_path='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008', vocab_size=151643, model_max_length=32768, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'additional_special_tokens': ['<|im_start|>', '<|im_end|>', '<|object_ref_start|>', '<|object_ref_end|>', '<|box_start|>', '<|box_end|>', '<|quad_start|>', '<|quad_end|>', '<|vision_start|>', '<|vision_end|>', '<|vision_pad|>', '<|image_pad|>', '<|video_pad|>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	151643: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151644: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151645: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151646: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151647: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151648: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151649: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151650: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151651: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151652: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151653: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151654: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151655: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	151656: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+- video_processor: Qwen2VLVideoProcessor {
+  "_valid_kwargs_names": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "crop_size": null,
+  "data_format": "channels_first",
+  "default_to_square": true,
+  "device": null,
+  "do_center_crop": null,
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_pad": null,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.48145466,
+    0.4578275,
+    0.40821073
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.26862954,
+    0.26130258,
+    0.27577711
+  ],
+  "input_data_format": null,
+  "max_pixels": 12845056,
+  "merge_size": 2,
+  "min_pixels": 3136,
+  "model_valid_processing_keys": [
+    "do_convert_rgb",
+    "do_resize",
+    "size",
+    "size_divisor",
+    "default_to_square",
+    "resample",
+    "do_rescale",
+    "rescale_factor",
+    "do_normalize",
+    "image_mean",
+    "image_std",
+    "do_pad",
+    "do_center_crop",
+    "crop_size",
+    "data_format",
+    "input_data_format",
+    "device",
+    "min_pixels",
+    "max_pixels",
+    "patch_size",
+    "temporal_patch_size",
+    "merge_size"
+  ],
+  "patch_size": 14,
+  "processor_class": "Qwen2VLProcessor",
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 12845056,
+    "shortest_edge": 3136
+  },
+  "size_divisor": null,
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen2VLVideoProcessor"
+}
+
+
+{
+  "processor_class": "Qwen2VLProcessor"
+}
+
+[INFO|configuration_utils.py:696] 2025-07-05 09:47:03,589 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/config.json
+[INFO|configuration_utils.py:696] 2025-07-05 09:47:03,589 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/config.json
+[INFO|configuration_utils.py:770] 2025-07-05 09:47:03,591 >> Model config Qwen2VLConfig {
+  "architectures": [
+    "Qwen2VLForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "hidden_act": "silu",
+  "hidden_size": 1536,
+  "image_token_id": 151655,
+  "initializer_range": 0.02,
+  "intermediate_size": 8960,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen2_vl",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 2,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "mrope_section": [
+      16,
+      24,
+      24
+    ],
+    "rope_type": "default",
+    "type": "default"
+  },
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "text_config": {
+    "architectures": [
+      "Qwen2VLForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 1536,
+    "image_token_id": null,
+    "initializer_range": 0.02,
+    "intermediate_size": 8960,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_vl_text",
+    "num_attention_heads": 12,
+    "num_hidden_layers": 28,
+    "num_key_value_heads": 2,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        24,
+        24
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "sliding_window": 32768,
+    "tie_word_embeddings": true,
+    "torch_dtype": "float32",
+    "use_cache": false,
+    "use_sliding_window": false,
+    "video_token_id": null,
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vision_token_id": 151654,
+    "vocab_size": 151936
+  },
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.52.4",
+  "use_cache": false,
+  "use_sliding_window": false,
+  "video_token_id": 151656,
+  "vision_config": {
+    "depth": 32,
+    "embed_dim": 1280,
+    "hidden_act": "quick_gelu",
+    "hidden_size": 1536,
+    "in_channels": 3,
+    "in_chans": 3,
+    "initializer_range": 0.02,
+    "mlp_ratio": 4,
+    "model_type": "qwen2_vl",
+    "num_heads": 16,
+    "patch_size": 14,
+    "spatial_merge_size": 2,
+    "spatial_patch_size": 14,
+    "temporal_patch_size": 2,
+    "torch_dtype": "float32"
+  },
+  "vision_end_token_id": 151653,
+  "vision_start_token_id": 151652,
+  "vision_token_id": 151654,
+  "vocab_size": 151936
+}
+
+INFO 07-05 09:47:15 [config.py:689] This model supports multiple tasks: {'generate', 'score', 'reward', 'classify', 'embed'}. Defaulting to 'generate'.
+INFO 07-05 09:47:15 [llm_engine.py:243] Initializing a V0 LLM engine (v0.8.4) with config: model='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008', speculative_config=None, tokenizer='saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=6144, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=None, chunked_prefill_enabled=False, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"splitting_ops":[],"compile_sizes":[],"cudagraph_capture_sizes":[256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":256}, use_cached_outputs=False, 
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:15,233 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:15,233 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:15,233 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:15,233 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:15,233 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:15,233 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2021] 2025-07-05 09:47:15,233 >> loading file chat_template.jinja
+[INFO|tokenization_utils_base.py:2299] 2025-07-05 09:47:15,563 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|configuration_utils.py:1088] 2025-07-05 09:47:15,663 >> loading configuration file saves/qwen2_vl-3b/vindr_sft_base/checkpoint-1008/generation_config.json
+[INFO|configuration_utils.py:1135] 2025-07-05 09:47:15,666 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.01,
+  "top_k": 1,
+  "top_p": 0.001
+}
+
