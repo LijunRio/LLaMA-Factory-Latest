@@ -495,3 +495,421 @@ You have video processor config saved in `preprocessor.json` file which is depre
 [INFO|2025-07-05 13:08:46] llamafactory.data.loader:143 >> Loading dataset ./0_my_dataset/vindr/train_vindr_qwen2_len_16087.json...
 [rank1]:[W705 13:08:46.451595838 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
 [rank2]:[W705 13:08:46.451598689 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+[rank3]:[W705 13:08:46.530949348 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+Converting format of dataset (num_proc=16):   0%|          | 0/16087 [00:00<?, ? examples/s]Converting format of dataset (num_proc=16):   0%|          | 1/16087 [00:00<39:00,  6.87 examples/s]Converting format of dataset (num_proc=16):   4%|▍         | 691/16087 [00:00<00:04, 3387.30 examples/s]Converting format of dataset (num_proc=16):  11%|█         | 1806/16087 [00:00<00:02, 6572.19 examples/s]Converting format of dataset (num_proc=16):  20%|█▉        | 3185/16087 [00:00<00:01, 9190.79 examples/s]Converting format of dataset (num_proc=16):  30%|██▉       | 4820/16087 [00:00<00:00, 11632.82 examples/s]Converting format of dataset (num_proc=16):  42%|████▏     | 6677/16087 [00:00<00:00, 13828.72 examples/s]Converting format of dataset (num_proc=16):  56%|█████▋    | 9078/16087 [00:00<00:00, 17034.15 examples/s]Converting format of dataset (num_proc=16):  79%|███████▉  | 12781/16087 [00:00<00:00, 23241.32 examples/s]Converting format of dataset (num_proc=16): 100%|██████████| 16087/16087 [00:01<00:00, 14197.70 examples/s]
+[rank0]:[W705 13:08:48.737018549 ProcessGroupNCCL.cpp:4561] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. Specify device_ids in barrier() to force use of a particular device, or call init_process_group() with a device_id.
+Running tokenizer on dataset (num_proc=16):   0%|          | 0/16087 [00:00<?, ? examples/s]Running tokenizer on dataset (num_proc=16):   6%|▌         | 1000/16087 [00:19<04:57, 50.80 examples/s]Running tokenizer on dataset (num_proc=16):  19%|█▊        | 3006/16087 [00:19<01:07, 194.83 examples/s]Running tokenizer on dataset (num_proc=16):  31%|███       | 5024/16087 [00:20<00:28, 382.36 examples/s]Running tokenizer on dataset (num_proc=16):  38%|███▊      | 6034/16087 [00:20<00:19, 512.63 examples/s]Running tokenizer on dataset (num_proc=16):  44%|████▎     | 7034/16087 [00:20<00:13, 664.93 examples/s]Running tokenizer on dataset (num_proc=16):  50%|████▉     | 8039/16087 [00:20<00:08, 899.69 examples/s]Running tokenizer on dataset (num_proc=16):  56%|█████▌    | 9045/16087 [00:21<00:05, 1212.51 examples/s]Running tokenizer on dataset (num_proc=16):  63%|██████▎   | 10055/16087 [00:21<00:03, 1603.67 examples/s]Running tokenizer on dataset (num_proc=16):  69%|██████▊   | 11055/16087 [00:21<00:02, 2117.51 examples/s]Running tokenizer on dataset (num_proc=16):  75%|███████▍  | 12061/16087 [00:21<00:01, 2730.57 examples/s]Running tokenizer on dataset (num_proc=16):  81%|████████  | 13066/16087 [00:21<00:00, 3484.29 examples/s]Running tokenizer on dataset (num_proc=16):  87%|████████▋ | 14072/16087 [00:21<00:00, 4266.50 examples/s]Running tokenizer on dataset (num_proc=16):  94%|█████████▎| 15077/16087 [00:21<00:00, 4320.87 examples/s]Running tokenizer on dataset (num_proc=16): 100%|█████████▉| 16082/16087 [00:22<00:00, 3033.12 examples/s]Running tokenizer on dataset (num_proc=16): 100%|██████████| 16087/16087 [00:22<00:00, 710.85 examples/s] 
+training example:
+input_ids:
+[151644, 8948, 198, 2610, 525, 264, 10950, 17847, 13, 151645, 198, 151644, 872, 198, 151652, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151655, 151653, 198, 5598, 30618, 14697, 315, 364, 47, 273, 4176, 12045, 6019, 6, 5671, 438, 4718, 3561, 510, 73594, 2236, 198, 9640, 4913, 58456, 62, 17, 67, 788, 508, 87, 16, 11, 379, 16, 11, 856, 17, 11, 379, 17, 1125, 330, 1502, 788, 330, 1502, 7115, 9338, 921, 73594, 151645, 198, 151644, 77091, 198, 27, 9217, 397, 9640, 220, 341, 262, 330, 58456, 62, 17, 67, 788, 2278, 414, 220, 20, 15, 345, 414, 220, 21, 21, 21, 345, 414, 220, 16, 19, 15, 345, 414, 220, 22, 20, 20, 198, 262, 3211, 262, 330, 1502, 788, 330, 47, 273, 4176, 12045, 6019, 698, 220, 456, 921, 522, 9217, 29, 151645, 198]
+inputs:
+<|im_start|>system
+You are a helpful assistant.<|im_end|>
+<|im_start|>user
+<|vision_start|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|>
+Return bounding boxes of 'Pleural thickening' areas as JSON format:
+```json
+[
+{"bbox_2d": [x1, y1, x2, y2], "label": "label"},
+...
+]
+```<|im_end|>
+<|im_start|>assistant
+<answer>
+[
+  {
+    "bbox_2d": [
+      50,
+      666,
+      140,
+      755
+    ],
+    "label": "Pleural thickening"
+  }
+]
+</answer><|im_end|>
+
+label_ids:
+[-100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 27, 9217, 397, 9640, 220, 341, 262, 330, 58456, 62, 17, 67, 788, 2278, 414, 220, 20, 15, 345, 414, 220, 21, 21, 21, 345, 414, 220, 16, 19, 15, 345, 414, 220, 22, 20, 20, 198, 262, 3211, 262, 330, 1502, 788, 330, 47, 273, 4176, 12045, 6019, 698, 220, 456, 921, 522, 9217, 29, 151645, 198]
+labels:
+<answer>
+[
+  {
+    "bbox_2d": [
+      50,
+      666,
+      140,
+      755
+    ],
+    "label": "Pleural thickening"
+  }
+]
+</answer><|im_end|>
+
+[INFO|configuration_utils.py:696] 2025-07-05 13:09:13,182 >> loading configuration file /home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-7B-Instruct/config.json
+[INFO|configuration_utils.py:770] 2025-07-05 13:09:13,184 >> Model config Qwen2VLConfig {
+  "architectures": [
+    "Qwen2VLForConditionalGeneration"
+  ],
+  "attention_dropout": 0.0,
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "hidden_act": "silu",
+  "hidden_size": 3584,
+  "image_token_id": 151655,
+  "initializer_range": 0.02,
+  "intermediate_size": 18944,
+  "max_position_embeddings": 32768,
+  "max_window_layers": 28,
+  "model_type": "qwen2_vl",
+  "num_attention_heads": 28,
+  "num_hidden_layers": 28,
+  "num_key_value_heads": 4,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": {
+    "mrope_section": [
+      16,
+      24,
+      24
+    ],
+    "rope_type": "default",
+    "type": "default"
+  },
+  "rope_theta": 1000000.0,
+  "sliding_window": 32768,
+  "text_config": {
+    "architectures": [
+      "Qwen2VLForConditionalGeneration"
+    ],
+    "attention_dropout": 0.0,
+    "bos_token_id": 151643,
+    "eos_token_id": 151645,
+    "hidden_act": "silu",
+    "hidden_size": 3584,
+    "image_token_id": null,
+    "initializer_range": 0.02,
+    "intermediate_size": 18944,
+    "max_position_embeddings": 32768,
+    "max_window_layers": 28,
+    "model_type": "qwen2_vl_text",
+    "num_attention_heads": 28,
+    "num_hidden_layers": 28,
+    "num_key_value_heads": 4,
+    "rms_norm_eps": 1e-06,
+    "rope_scaling": {
+      "mrope_section": [
+        16,
+        24,
+        24
+      ],
+      "rope_type": "default",
+      "type": "default"
+    },
+    "rope_theta": 1000000.0,
+    "sliding_window": 32768,
+    "torch_dtype": "bfloat16",
+    "use_cache": true,
+    "use_sliding_window": false,
+    "video_token_id": null,
+    "vision_end_token_id": 151653,
+    "vision_start_token_id": 151652,
+    "vision_token_id": 151654,
+    "vocab_size": 152064
+  },
+  "tie_word_embeddings": false,
+  "torch_dtype": "bfloat16",
+  "transformers_version": "4.52.4",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "video_token_id": 151656,
+  "vision_config": {
+    "depth": 32,
+    "embed_dim": 1280,
+    "hidden_act": "quick_gelu",
+    "hidden_size": 3584,
+    "in_channels": 3,
+    "in_chans": 3,
+    "initializer_range": 0.02,
+    "mlp_ratio": 4,
+    "model_type": "qwen2_vl",
+    "num_heads": 16,
+    "patch_size": 14,
+    "spatial_merge_size": 2,
+    "spatial_patch_size": 14,
+    "temporal_patch_size": 2
+  },
+  "vision_end_token_id": 151653,
+  "vision_start_token_id": 151652,
+  "vision_token_id": 151654,
+  "vocab_size": 152064
+}
+
+[INFO|2025-07-05 13:09:13] llamafactory.model.model_utils.kv_cache:143 >> KV cache is disabled during training.
+[INFO|modeling_utils.py:1148] 2025-07-05 13:09:13,398 >> loading weights file /home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-7B-Instruct/model.safetensors.index.json
+[2025-07-05 13:09:13,398] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 4
+[INFO|modeling_utils.py:3881] 2025-07-05 13:09:13,399 >> Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+[2025-07-05 13:09:13,399] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 4
+[2025-07-05 13:09:13,399] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 4
+[2025-07-05 13:09:13,399] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 4
+[INFO|configuration_utils.py:1135] 2025-07-05 13:09:13,412 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "use_cache": false
+}
+
+[INFO|modeling_utils.py:2241] 2025-07-05 13:09:13,412 >> Instantiating Qwen2VisionTransformerPretrainedModel model under default dtype torch.float32.
+[INFO|modeling_utils.py:2241] 2025-07-05 13:09:13,779 >> Instantiating Qwen2VLTextModel model under default dtype torch.float32.
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s][2025-07-05 13:09:13,957] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 730, num_elems = 8.29B
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:13<00:52, 13.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:13<00:52, 13.10s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:13<00:52, 13.11s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:13<00:52, 13.16s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:19<00:27,  9.09s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:19<00:27,  9.08s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:19<00:27,  9.09s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:19<00:28,  9.42s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:25<00:15,  7.77s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:25<00:15,  7.77s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:25<00:15,  7.77s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:25<00:15,  7.84s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:30<00:06,  6.78s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:30<00:06,  6.78s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:30<00:06,  6.78s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:30<00:00,  6.17s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:30<00:00,  6.17s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:30<00:00,  6.17s/it]
+Loading checkpoint shards:  80%|████████  | 4/5 [00:31<00:06,  6.88s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:32<00:00,  4.85s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:32<00:00,  6.52s/it]
+[INFO|modeling_utils.py:5131] 2025-07-05 13:09:46,584 >> All model checkpoint weights were used when initializing Qwen2VLForConditionalGeneration.
+
+[INFO|modeling_utils.py:5139] 2025-07-05 13:09:46,584 >> All the weights of Qwen2VLForConditionalGeneration were initialized from the model checkpoint at /home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-7B-Instruct/.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use Qwen2VLForConditionalGeneration for predictions without further training.
+[INFO|configuration_utils.py:1088] 2025-07-05 13:09:46,590 >> loading configuration file /home/june/Code/new_llamafactory/saves/huggingface_origin/Qwen2-VL-7B-Instruct/generation_config.json
+[INFO|configuration_utils.py:1135] 2025-07-05 13:09:46,590 >> Generate config GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.01,
+  "top_k": 1,
+  "top_p": 0.001
+}
+
+[INFO|2025-07-05 13:09:46] llamafactory.model.model_utils.checkpointing:143 >> Gradient checkpointing enabled.
+[INFO|2025-07-05 13:09:46] llamafactory.model.model_utils.attention:143 >> Using torch SDPA for faster training and inference.
+[INFO|2025-07-05 13:09:46] llamafactory.model.adapter:143 >> DeepSpeed ZeRO3 detected, remaining trainable params in float32.
+[INFO|2025-07-05 13:09:46] llamafactory.model.adapter:143 >> Fine-tuning method: Full
+[INFO|2025-07-05 13:09:46] llamafactory.model.loader:143 >> trainable params: 8,291,375,616 || all params: 8,291,375,616 || trainable%: 100.0000
+[INFO|trainer.py:756] 2025-07-05 13:09:46,633 >> Using auto half precision backend
+[2025-07-05 13:09:47,014] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed info: version=0.16.6, git-hash=unknown, git-branch=unknown
+[2025-07-05 13:09:47,014] [INFO] [config.py:735:__init__] Config mesh_device None world_size = 4
+[2025-07-05 13:09:47,029] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2025-07-05 13:09:47,031] [INFO] [logging.py:107:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2025-07-05 13:09:47,031] [INFO] [logging.py:107:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-07-05 13:09:47,076] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2025-07-05 13:09:47,076] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2025-07-05 13:09:47,076] [INFO] [logging.py:107:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2025-07-05 13:09:47,076] [INFO] [logging.py:107:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2025-07-05 13:09:47,350] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2025-07-05 13:09:47,351] [INFO] [utils.py:782:see_memory_usage] MA 3.86 GB         Max_MA 6.65 GB         CA 3.86 GB         Max_CA 7 GB 
+[2025-07-05 13:09:47,351] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.59 GB, percent = 5.0%
+[2025-07-05 13:09:47,353] [INFO] [stage3.py:170:__init__] Reduce bucket size 12845056
+[2025-07-05 13:09:47,353] [INFO] [stage3.py:171:__init__] Prefetch bucket size 11560550
+[2025-07-05 13:09:47,579] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2025-07-05 13:09:47,579] [INFO] [utils.py:782:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 3.86 GB         Max_CA 4 GB 
+[2025-07-05 13:09:47,579] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.59 GB, percent = 5.0%
+Parameter Offload: Total persistent parameters: 877056 in 401 params
+[2025-07-05 13:09:47,854] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2025-07-05 13:09:47,855] [INFO] [utils.py:782:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 3.86 GB         Max_CA 4 GB 
+[2025-07-05 13:09:47,855] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.6 GB, percent = 5.0%
+[2025-07-05 13:09:48,072] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2025-07-05 13:09:48,072] [INFO] [utils.py:782:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 3.86 GB         Max_CA 4 GB 
+[2025-07-05 13:09:48,073] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.6 GB, percent = 5.0%
+[2025-07-05 13:09:51,599] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 3
+[2025-07-05 13:09:51,600] [INFO] [utils.py:782:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 3.9 GB         Max_CA 4 GB 
+[2025-07-05 13:09:51,600] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.64 GB, percent = 5.0%
+[2025-07-05 13:09:51,818] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2025-07-05 13:09:51,818] [INFO] [utils.py:782:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 3.9 GB         Max_CA 4 GB 
+[2025-07-05 13:09:51,819] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.64 GB, percent = 5.0%
+[2025-07-05 13:09:52,063] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2025-07-05 13:09:52,064] [INFO] [utils.py:782:see_memory_usage] MA 11.58 GB         Max_MA 13.57 GB         CA 15.48 GB         Max_CA 15 GB 
+[2025-07-05 13:09:52,064] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.64 GB, percent = 5.0%
+[2025-07-05 13:09:52,282] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2025-07-05 13:09:52,283] [INFO] [utils.py:782:see_memory_usage] MA 11.58 GB         Max_MA 11.58 GB         CA 15.48 GB         Max_CA 15 GB 
+[2025-07-05 13:09:52,283] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.64 GB, percent = 5.0%
+[2025-07-05 13:09:52,509] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2025-07-05 13:09:52,510] [INFO] [utils.py:782:see_memory_usage] MA 11.58 GB         Max_MA 15.56 GB         CA 19.47 GB         Max_CA 19 GB 
+[2025-07-05 13:09:52,510] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 50.65 GB, percent = 5.0%
+[2025-07-05 13:09:52,510] [INFO] [stage3.py:534:_setup_for_real_optimizer] optimizer state initialized
+[2025-07-05 13:09:52,962] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2025-07-05 13:09:52,963] [INFO] [utils.py:782:see_memory_usage] MA 15.47 GB         Max_MA 17.5 GB         CA 19.47 GB         Max_CA 19 GB 
+[2025-07-05 13:09:52,963] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 51.41 GB, percent = 5.1%
+[2025-07-05 13:09:52,963] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2025-07-05 13:09:52,963] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2025-07-05 13:09:52,963] [INFO] [logging.py:107:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2025-07-05 13:09:52,963] [INFO] [logging.py:107:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0, 0.0], mom=[(0.9, 0.999), (0.9, 0.999)]
+[2025-07-05 13:09:52,965] [INFO] [config.py:1003:print] DeepSpeedEngine configuration:
+[2025-07-05 13:09:52,965] [INFO] [config.py:1007:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2025-07-05 13:09:52,965] [INFO] [config.py:1007:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'intra_op_parallelism': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2025-07-05 13:09:52,965] [INFO] [config.py:1007:print]   amp_enabled .................. False
+[2025-07-05 13:09:52,965] [INFO] [config.py:1007:print]   amp_params ................... False
+[2025-07-05 13:09:52,965] [INFO] [config.py:1007:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   bfloat16_enabled ............. True
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   bfloat16_immediate_grad_update  True
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   checkpoint_parallel_write_pipeline  False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   checkpoint_tag_validation_enabled  True
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   checkpoint_tag_validation_fail  False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7fe0fe2accd0>
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   communication_data_type ...... None
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   compile_config ............... deepcompile=False free_activation=False offload_activation=False offload_opt_states=False double_buffer=True symmetric_memory=False debug_log=False offload_parameters=False sync_before_reduce=False sync_after_reduce=False sync_before_allgather=False sync_after_allgather=False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   curriculum_enabled_legacy .... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   curriculum_params_legacy ..... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'pin_memory': False, 'curriculum_learning': {'enabled': False}, 'dynamic_batching': {'enabled': False, 'lr_scaling_method': 'linear', 'min_batch_size': 1, 'max_batch_size': None, 'sequence_picking_order': 'dataloader', 'verbose': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   data_efficiency_enabled ...... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   dataloader_drop_last ......... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   disable_allgather ............ False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   dump_state ................... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   dynamic_loss_scale_args ...... None
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_enabled ........... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_gas_boundary_resolution  1
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_layer_num ......... 0
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_max_iter .......... 100
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_stability ......... 1e-06
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_tol ............... 0.01
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   eigenvalue_verbose ........... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   elasticity_enabled ........... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   fp16_auto_cast ............... None
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   fp16_enabled ................. False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   fp16_master_weights_and_gradients  False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   global_rank .................. 0
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   grad_accum_dtype ............. None
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   gradient_accumulation_steps .. 8
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   gradient_clipping ............ 1.0
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   gradient_predivide_factor .... 1.0
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   graph_harvesting ............. False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   initial_dynamic_scale ........ 1
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   load_universal_checkpoint .... False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   loss_scale ................... 1.0
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   memory_breakdown ............. False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   mics_hierarchial_params_gather  False
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   mics_shard_size .............. -1
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2025-07-05 13:09:52,966] [INFO] [config.py:1007:print]   optimizer_legacy_fusion ...... False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   optimizer_name ............... None
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   optimizer_params ............. None
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   pld_enabled .................. False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   pld_params ................... False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   prescale_gradients ........... False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   scheduler_name ............... None
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   scheduler_params ............. None
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   seq_parallel_communication_data_type  torch.float32
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   sparse_attention ............. None
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   sparse_gradients_enabled ..... False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   steps_per_print .............. inf
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   tensor_parallel_config ....... dtype=torch.float16 autotp_size=0 tp_overlap_comm=False tensor_parallel=TPConfig(tp_size=1, tp_grain_size=1, mpu=None, tp_group=None) injection_policy_tuple=None keep_module_on_host=False replace_with_kernel_inject=False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   timers_config ................ enabled=True synchronized=True
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   train_batch_size ............. 256
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   train_micro_batch_size_per_gpu  8
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   use_data_before_expert_parallel_  False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   use_node_local_storage ....... False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   wall_clock_breakdown ......... False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   weight_quantization_config ... None
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   world_size ................... 4
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   zero_allow_untested_optimizer  True
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=12845056 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=11560550 param_persistence_threshold=35840 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=True module_granularity_threshold=0 use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False zeropp_loco_param=None mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True log_trace_cache_warnings=False
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   zero_enabled ................. True
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   zero_force_ds_cpu_optimizer .. True
+[2025-07-05 13:09:52,967] [INFO] [config.py:1007:print]   zero_optimization_stage ...... 3
+[2025-07-05 13:09:52,967] [INFO] [config.py:993:print_user_config]   json = {
+    "train_batch_size": 256, 
+    "train_micro_batch_size_per_gpu": 8, 
+    "gradient_accumulation_steps": 8, 
+    "gradient_clipping": 1.0, 
+    "zero_allow_untested_optimizer": true, 
+    "fp16": {
+        "enabled": false, 
+        "loss_scale": 0, 
+        "loss_scale_window": 1000, 
+        "initial_scale_power": 16, 
+        "hysteresis": 2, 
+        "min_loss_scale": 1
+    }, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "overlap_comm": false, 
+        "contiguous_gradients": true, 
+        "sub_group_size": 1.000000e+09, 
+        "reduce_bucket_size": 1.284506e+07, 
+        "stage3_prefetch_bucket_size": 1.156055e+07, 
+        "stage3_param_persistence_threshold": 3.584000e+04, 
+        "stage3_max_live_parameters": 1.000000e+09, 
+        "stage3_max_reuse_distance": 1.000000e+09, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "steps_per_print": inf
+}
+[INFO|trainer.py:2409] 2025-07-05 13:09:52,969 >> ***** Running training *****
+[INFO|trainer.py:2410] 2025-07-05 13:09:52,969 >>   Num examples = 16,087
+[INFO|trainer.py:2411] 2025-07-05 13:09:52,969 >>   Num Epochs = 15
+[INFO|trainer.py:2412] 2025-07-05 13:09:52,969 >>   Instantaneous batch size per device = 8
+[INFO|trainer.py:2415] 2025-07-05 13:09:52,969 >>   Total train batch size (w. parallel, distributed & accumulation) = 256
+[INFO|trainer.py:2416] 2025-07-05 13:09:52,969 >>   Gradient Accumulation steps = 8
+[INFO|trainer.py:2417] 2025-07-05 13:09:52,969 >>   Total optimization steps = 945
+[INFO|trainer.py:2418] 2025-07-05 13:09:52,970 >>   Number of trainable parameters = 8,291,375,616
+[INFO|integration_utils.py:832] 2025-07-05 13:09:52,972 >> Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+wandb: WARNING The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: jun_rio (compai) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.9
+wandb: Run data is saved locally in /home/june/Code/LLaMA-Factory-Latest/wandb/run-20250705_130954-9eewk6ad
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run saves/qwen2_vl-7b/vindr_sft_base
+wandb: ⭐️ View project at https://wandb.ai/compai/llamafactory
+wandb: 🚀 View run at https://wandb.ai/compai/llamafactory/runs/9eewk6ad
+  0%|          | 0/945 [00:00<?, ?it/s][WARNING|logging.py:328] 2025-07-05 13:09:59,438 >> `loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+`loss_type=None` was set in the config but it is unrecognised.Using the default loss: `ForCausalLMLoss`.
+  0%|          | 1/945 [00:34<9:08:52, 34.89s/it]
